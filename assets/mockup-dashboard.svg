@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nav-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="720" fill="#0f172a" />
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    
+    <!-- TOP NAVBAR -->
+    <rect x="0" y="0" width="1000" height="60" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="30" y="37" fill="#10b981" font-size="22" font-weight="800">TemuNiaga</text>
+    <rect x="160" y="16" width="130" height="28" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1" />
+    <text x="225" y="34" fill="#a7f3d0" font-size="12" font-weight="700" text-anchor="middle">OPERATOR KOPDES</text>
+    
+    <text x="920" y="36" fill="#cbd5e1" font-size="14" font-weight="600" text-anchor="end">Kopdes Sukamaju Raya (ID: KOP-8021)</text>
+    <circle cx="950" cy="30" r="15" fill="#3b82f6" />
+    <text x="950" y="35" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">OP</text>
+
+    <!-- LEFT SIDEBAR -->
+    <rect x="0" y="60" width="220" height="620" fill="url(#nav-bg)" stroke="#334155" stroke-width="1" />
+    <g transform="translate(20, 90)">
+      <rect x="0" y="0" width="180" height="40" rx="8" fill="#3b82f6" />
+      <text x="20" y="25" fill="#ffffff" font-size="14" font-weight="700">Dashboard Utama</text>
+
+      <text x="20" y="75" fill="#94a3b8" font-size="14" font-weight="600">Terima &amp; Grading</text>
+      <text x="20" y="120" fill="#94a3b8" font-size="14" font-weight="600">Inventori Gudang</text>
+      <text x="20" y="165" fill="#94a3b8" font-size="14" font-weight="600">Matching RFQ B2B</text>
+      <text x="20" y="210" fill="#94a3b8" font-size="14" font-weight="600">Etalase Gerai B2C</text>
+      <text x="20" y="255" fill="#94a3b8" font-size="14" font-weight="600">Ledger Transparan</text>
+      <text x="20" y="300" fill="#94a3b8" font-size="14" font-weight="600">Ekspor Simkopdes</text>
+    </g>
+
+    <!-- MAIN DASHBOARD CONTENT AREA -->
+    <g transform="translate(245, 90)">
+      
+      <!-- STATS SUMMARY CARDS -->
+      <rect x="0" y="0" width="235" height="110" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)" />
+      <text x="20" y="30" fill="#94a3b8" font-size="13" font-weight="600">KAS MODAL KERJA</text>
+      <text x="20" y="65" fill="#10b981" font-size="21" font-weight="800">Rp 1.850.000.000</text>
+      <text x="20" y="90" fill="#64748b" font-size="12">Plafon Himbara Rp3M (Bunga 6%)</text>
+
+      <rect x="255" y="0" width="235" height="110" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)" />
+      <text x="275" y="30" fill="#94a3b8" font-size="13" font-weight="600">STOK GUDANG TERVERIFIKASI</text>
+      <text x="275" y="65" fill="#38bdf8" font-size="21" font-weight="800">84.520 KG</text>
+      <text x="275" y="90" fill="#64748b" font-size="12">Gabah, Singkong, Kopi, Olahan</text>
+
+      <rect x="510" y="0" width="235" height="110" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)" />
+      <text x="530" y="30" fill="#94a3b8" font-size="13" font-weight="600">RFQ B2B TERKUNCI</text>
+      <text x="530" y="65" fill="#fbbf24" font-size="21" font-weight="800">5 Deal Aktif</text>
+      <text x="530" y="90" fill="#64748b" font-size="12">Potensi Nilai Jual: Rp 942 Juta</text>
+
+      <!-- SECTION: TABEL PASOKAN MASUK -->
+      <g transform="translate(0, 135)">
+        <rect x="0" y="0" width="745" height="240" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)" />
+        <rect x="0" y="0" width="745" height="50" rx="12" fill="#0f172a" />
+        <text x="20" y="32" fill="#ffffff" font-size="16" font-weight="700">Pengecekan Fisik di Titik Terima (Grading MANUAL &amp; Tombol "YA")</text>
+
+        <g transform="translate(20, 80)" font-size="13" font-weight="700" fill="#94a3b8">
+          <text x="0">ANGGOTA (PETANI)</text>
+          <text x="180">KOMODITAS</text>
+          <text x="340">BERAT (TIMBANG)</text>
+          <text x="460">GRADE MANUAL</text>
+          <text x="590">STATUS CASH</text>
+        </g>
+        <line x1="20" y1="95" x2="725" y2="95" stroke="#334155" stroke-width="1" />
+
+        <g transform="translate(20, 125)" font-size="13" fill="#ffffff">
+          <text x="0" y="0" font-weight="600">Ahmad (ID: PT-101)</text>
+          <text x="180" y="0">Singkong Mentah</text>
+          <text x="340" y="0" fill="#38bdf8" font-weight="700">2.510 KG</text>
+          
+          <rect x="460" y="-15" width="80" height="22" rx="4" fill="#052e16" stroke="#10b981" stroke-width="1" />
+          <text x="500" y="1" fill="#a7f3d0" font-weight="700" text-anchor="middle">Grade A</text>
+
+          <rect x="590" y="-15" width="125" height="22" rx="4" fill="#065f46" />
+          <text x="652.5" y="1" fill="#ffffff" font-weight="700" text-anchor="middle">DIBAYAR LUNAS</text>
+        </g>
+        <line x1="20" y1="145" x2="725" y2="145" stroke="#334155" stroke-width="1" />
+
+        <g transform="translate(20, 175)" font-size="13" fill="#ffffff">
+          <text x="0" y="0" font-weight="600">Siti Rahma (UMKM)</text>
+          <text x="180" y="0">Keripik Kemasan</text>
+          <text x="340" y="0" fill="#38bdf8" font-weight="700">450 KG</text>
+          
+          <rect x="460" y="-15" width="80" height="22" rx="4" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1" />
+          <text x="500" y="1" fill="#dbeafe" font-weight="700" text-anchor="middle">Grade A+</text>
+
+          <rect x="590" y="-15" width="125" height="22" rx="4" fill="#78350f" />
+          <text x="652.5" y="1" fill="#fde68a" font-weight="700" text-anchor="middle">KONSINYASI</text>
+        </g>
+        <line x1="20" y1="195" x2="725" y2="195" stroke="#334155" stroke-width="1" />
+
+        <g transform="translate(20, 225)" font-size="13" fill="#ffffff">
+          <text x="0" y="0" font-weight="600">Budi Santoso</text>
+          <text x="180" y="0">Gabah Kering (GKP)</text>
+          <text x="340" y="0" fill="#38bdf8" font-weight="700">5.200 KG</text>
+          
+          <rect x="460" y="-15" width="80" height="22" rx="4" fill="#7f1d1a" stroke="#ef4444" stroke-width="1" />
+          <text x="500" y="1" fill="#fca5a5" font-weight="700" text-anchor="middle">Grade B</text>
+
+          <rect x="590" y="-15" width="125" height="22" rx="4" fill="#3b82f6" />
+          <text x="652.5" y="1" fill="#ffffff" font-weight="700" text-anchor="middle">TALANGAN DP</text>
+        </g>
+      </g>
+
+      <!-- SECTION: LIVE MATCHING ENGINE -->
+      <g transform="translate(0, 405)">
+        <rect x="0" y="0" width="745" height="160" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)" />
+        <rect x="0" y="0" width="745" height="40" rx="12" fill="#0f172a" />
+        <text x="20" y="25" fill="#fbbf24" font-size="15" font-weight="700">Algoritma A: Matching Stok dengan Permintaan Pembeli Besar B2B</text>
+
+        <g transform="translate(20, 60)">
+          <rect x="0" y="0" width="340" height="80" rx="8" fill="#0f172a" stroke="#052e16" stroke-width="1.5" />
+          <text x="15" y="28" fill="#ffffff" font-size="14" font-weight="700">PT INDOFOOD CBP (RFQ-9921)</text>
+          <text x="15" y="48" fill="#10b981" font-size="13" font-weight="600">Butuh: 10 Ton Singkong Grade A</text>
+          <text x="15" y="68" fill="#94a3b8" font-size="11.5">Match: Stok Terpenuhi (FIFO)</text>
+          <rect x="240" y="26" width="85" height="28" rx="6" fill="#10b981" />
+          <text x="282.5" y="45" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">KIRIM LOT</text>
+        </g>
+
+        <g transform="translate(385, 60)">
+          <rect x="0" y="0" width="340" height="80" rx="8" fill="#0f172a" stroke="#1e3a8a" stroke-width="1.5" />
+          <text x="15" y="28" fill="#ffffff" font-size="14" font-weight="700">PERUM BULOG DIVRE (RFQ-4402)</text>
+          <text x="15" y="48" fill="#38bdf8" font-size="13" font-weight="600">Butuh: 50 Ton Beras Medium</text>
+          <text x="15" y="68" fill="#fbbf24" font-size="11.5">Match: Pooling Antar-Kopdes</text>
+          <rect x="240" y="26" width="85" height="28" rx="6" fill="#3b82f6" />
+          <text x="282.5" y="45" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">POOLING</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- CONCEPT PREVIEW NOTE -->
+  <text x="500" y="705" fill="#64748b" font-size="13" font-weight="500" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">* Ilustrasi Pratinjau Konsep (Concept Preview) - Bukan Tampilan Antarmuka Final</text>
+</svg>

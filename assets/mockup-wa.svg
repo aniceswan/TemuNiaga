@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wa-header" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#075e54" />
+      <stop offset="100%" stop-color="#128c7e" />
+    </linearGradient>
+    <pattern id="wa-bg" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="#0d1418" />
+      <path d="M10 10 h10 v10 h-10 Z M40 40 h10 v10 h-10 Z" fill="#1b262c" opacity="0.3" />
+    </pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="750" fill="#0f172a" />
+  
+  <g transform="translate(100, 20)">
+    <rect x="0" y="0" width="600" height="680" rx="30" fill="#0d1418" stroke="#334155" stroke-width="10" filter="url(#shadow)" />
+    
+    <rect x="0" y="0" width="600" height="75" rx="30" fill="url(#wa-header)" />
+    <rect x="0" y="40" width="600" height="35" fill="url(#wa-header)" />
+    
+    <circle cx="50" cy="38" r="22" fill="#ffffff" />
+    <text x="50" y="44" fill="#075e54" font-size="18" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">TN</text>
+    
+    <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+      <text x="85" y="33" fill="#ffffff" font-size="18" font-weight="700">TemuNiaga Kopdes Bot</text>
+      <text x="85" y="53" fill="#a7f3d0" font-size="13" font-weight="500">Akun Resmi Koperasi Desa Merah Putih</text>
+      
+      <rect x="0" y="75" width="600" height="535" fill="url(#wa-bg)" />
+
+      <!-- CHAT MESSAGE 1 -->
+      <g transform="translate(30, 100)">
+        <rect x="0" y="0" width="480" height="115" rx="12" fill="#1f2c34" filter="url(#shadow)" />
+        <polygon points="0,15 -10,15 0,25" fill="#1f2c34" />
+        <text x="18" y="26" fill="#38bdf8" font-size="14" font-weight="700">Sistem Autentikasi NIK</text>
+        <text x="18" y="52" fill="#ffffff" font-size="15">Selamat datang, Bapak Ahmad (Petani Singkong &amp; Gabah).</text>
+        <text x="18" y="76" fill="#cbd5e1" font-size="14">Nomor WhatsApp Anda TERVERIFIKASI sebagai Anggota Kopdes.</text>
+        <text x="18" y="100" fill="#10b981" font-size="14" font-weight="600">Silakan pilih menu transaksi interaktif di bawah ini:</text>
+      </g>
+
+      <!-- QUICK REPLY BUTTONS -->
+      <g transform="translate(30, 230)">
+        <rect x="0" y="0" width="145" height="38" rx="19" fill="#005c4b" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)" />
+        <text x="72.5" y="24" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle">Lapor Pasokan</text>
+        
+        <rect x="160" y="0" width="145" height="38" rx="19" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)" />
+        <text x="232.5" y="24" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle">Cek Harga BPS</text>
+        
+        <rect x="320" y="0" width="145" height="38" rx="19" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)" />
+        <text x="392.5" y="24" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle">Status Pencairan</text>
+      </g>
+
+      <!-- USER MESSAGE (FIXED OVERLAP TIME & CHECKMARK) -->
+      <g transform="translate(370, 290)">
+        <rect x="0" y="0" width="200" height="42" rx="12" fill="#005c4b" filter="url(#shadow)" />
+        <polygon points="200,15 210,15 200,25" fill="#005c4b" />
+        <text x="20" y="26" fill="#ffffff" font-size="15" font-weight="600">Lapor Pasokan</text>
+        <text x="140" y="28" fill="#94a3b8" font-size="11">12:01</text>
+        <path d="M172 24 L177 29 L185 19 M179 29 L187 19" stroke="#38bdf8" stroke-width="1.5" fill="none" />
+      </g>
+
+      <!-- BOT MESSAGE 2 -->
+      <g transform="translate(30, 350)">
+        <rect x="0" y="0" width="520" height="230" rx="12" fill="#1f2c34" filter="url(#shadow)" />
+        <polygon points="0,15 -10,15 0,25" fill="#1f2c34" />
+        <text x="18" y="28" fill="#10b981" font-size="15" font-weight="700">Antrean Pasokan Terdaftar (Siap Antar/Jemput)</text>
+        
+        <rect x="18" y="42" width="484" height="105" rx="8" fill="#102a24" stroke="#047857" stroke-width="1" />
+        <text x="32" y="65" fill="#a7f3d0" font-size="14" font-weight="700">KOMODITAS: SINGKONG MENTAH (ESTIMASI 2.500 KG)</text>
+        <text x="32" y="88" fill="#ffffff" font-size="14">Harga Acuan BPS/Bapanas : <tspan font-weight="700" fill="#fbbf24">Rp1.350 / kg</tspan></text>
+        <text x="32" y="110" fill="#ffffff" font-size="14">Potensi Diterima (Mode Talangan) : <tspan font-weight="700" fill="#38bdf8">Rp3.375.000</tspan></text>
+        <text x="32" y="132" fill="#94a3b8" font-size="12">(*Grade final &amp; pencairan saat penimbangan fisik di Kopdes)</text>
+
+        <text x="18" y="175" fill="#cbd5e1" font-size="14">Silakan bawa hasil panen ke gudang Koperasi Desa hari ini.</text>
+        <text x="18" y="202" fill="#38bdf8" font-size="14" font-weight="600">Minta Jemput Armada (Koperasi siap menjemput ke lokasi Anda).</text>
+      </g>
+
+      <!-- Input Bar -->
+      <g transform="translate(0, 610)">
+        <rect x="0" y="0" width="600" height="70" rx="30" fill="#1e2428" />
+        <rect x="0" y="0" width="600" height="30" fill="#1e2428" />
+        
+        <rect x="20" y="13" width="480" height="44" rx="22" fill="#2a3942" />
+        <text x="40" y="40" fill="#8496a0" font-size="15">Ketik pesan atau pilih tombol menu di atas...</text>
+        
+        <circle cx="550" cy="35" r="22" fill="#005c4b" />
+        <circle cx="550" cy="35" r="8" fill="#ffffff" />
+      </g>
+    </g>
+  </g>
+
+  <!-- CONCEPT PREVIEW NOTE -->
+  <text x="400" y="725" fill="#64748b" font-size="13" font-weight="500" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">* Ilustrasi Pratinjau Konsep (Concept Preview) - Bukan Tampilan Antarmuka Final</text>
+</svg>
