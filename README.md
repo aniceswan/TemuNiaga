@@ -37,7 +37,7 @@
   - [Matriks Analisis Risiko & Penanggulangan (R1–R12)](#matriks-analisis-risiko--penanggulangan-r1r12)
   - [Posisi Terhadap Simkopdes & Model Keberlanjutan Finansial](#posisi-terhadap-simkopdes--model-keberlanjutan-finansial)
   - [Daftar Sumber Terverifikasi & Teori Ekonomi](#daftar-sumber-terverifikasi--teori-ekonomi)
-- [BAGIAN 3: MENTORSHIP ADDITIONS — Data, Pitch & Strategy](#bagian-3-mentorship-additions--data-pitch--strategy)
+- [BAGIAN 3: MENTORSHIP ADDITIONS: Data, Pitch & Strategy](#bagian-3-mentorship-additions--data-pitch--strategy)
   - [A. Jurang Terdaftar vs Hidup (Data SimkopDes Juni 2026)](#a-jurang-terdaftar-vs-hidup-data-simkopdes-juni-2026)
   - [B. Kriteria Juri & Format Pitch](#b-kriteria-juri--format-pitch)
   - [C. TAM · SAM · SOM](#c-tam--sam--som)
@@ -274,7 +274,7 @@ Antarmuka sadar-kondisi untuk petani dengan literasi digital rendah. Didukung me
 ---
 
 #### 2. Voice Bot (Petani Sangat Kuno)
-Tak perlu baca, tak perlu tekan tombol. Cukup bicara — AI jawab berdasar data, near-zero halusinasi. STT → RAG → TTS. **Masuk MVP (live demo).**
+Tak perlu baca, tak perlu tekan tombol. Cukup bicara. AI jawab berdasar data, near-zero halusinasi. STT ke RAG ke TTS. **Masuk MVP (live demo).**
 
 <div align="center">
   <img src="assets/mockup-voicebot.svg" alt="Mockup Voice Bot" width="100%"/>
@@ -335,7 +335,7 @@ Jika data farmgate kosong, sistem terpaksa memakai rumus `Harga Grosir - (Biaya 
 
 > [!NOTE]
 > **AI Asisten RAG (Grounded Data, Nol Halusinasi):**  
-> Sistem menyertakan asisten AI berbasis LLM + RAG (Retrieval-Augmented Generation) atas data sendiri (ledger, harga, status transaksi). AI hanya menjawab dari data aplikasi — bukan mengarang, bukan LLM free-form. Setiap jawaban bisa ditelusuri ke baris data. Modul ML time-series opsional untuk prakiraan tren 1–2 minggu. Detail di §Asisten AI.
+> Sistem menyertakan asisten AI berbasis LLM + RAG (Retrieval-Augmented Generation) atas data sendiri (ledger, harga, status transaksi). AI hanya menjawab dari data aplikasi, bukan mengarang, bukan LLM free-form. Setiap jawaban bisa ditelusuri ke baris data. Modul ML time-series opsional untuk prakiraan tren 1-2 minggu. Detail di §Asisten AI.
 
 ---
 
@@ -440,7 +440,7 @@ graph TB
 
 #### Prinsip Arsitektur Enterprise MVP:
 - **Modular Micro-Services**: Layanan otentikasi, matching, harga, ledger, AI, dan notifikasi dipisah secara modular agar dapat diskalakan secara independen.
-- **AI Service (RAG Scoped)**: LLM + Retrieval-Augmented Generation dengan grounding data sendiri (ledger, harga, status transaksi). Scope ketat — hanya menjawab topik yang punya data. Di luar scope → "hubungi operator". Setiap jawaban bisa ditelusuri ke baris data (near-zero halusinasi).
+- **AI Service (RAG Scoped)**: LLM + Retrieval-Augmented Generation dengan grounding data sendiri (ledger, harga, status transaksi). Scope ketat, hanya menjawab topik yang punya data. Di luar scope: "hubungi operator". Setiap jawaban bisa ditelusuri ke baris data (near-zero halusinasi).
 - **Voice Bot Pipeline**: STT → Intent Classification → RAG Query → LLM Format → TTS. Semua berbasis data, bukan free-form.
 - **Granular RBAC**: Pemisahan hak akses tegas antara Petani, Operator Kopdes, Pengawas, dan Pembeli B2B.
 - **Multi-Tenant Database**: Skema PostgreSQL didesain mendukung agregasi dan pooling stok antar-koperasi secara nasional.
@@ -561,7 +561,7 @@ Seluruh angka, regulasi, dan landasan teori dalam dokumen ini telah diverifikasi
 
 ---
 
-## BAGIAN 3: MENTORSHIP ADDITIONS — Data, Pitch & Strategy
+## BAGIAN 3: MENTORSHIP ADDITIONS: Data, Pitch & Strategy
 
 ### A. Jurang Terdaftar vs Hidup (Data SimkopDes Juni 2026)
 
@@ -588,7 +588,7 @@ Seluruh angka, regulasi, dan landasan teori dalam dokumen ini telah diverifikasi
 | **Beras** | Rp6.925/kg | Rp7.133/kg (+3%) | 1.000 × 2.000 kg/th | **+Rp416 juta/th** | 12 bln |
 | **Singkong** | Rp1.350/kg | Rp1.500/kg (+11%) | 300 × 5.000 kg/th | **+Rp225 juta/th** | 6 bln |
 
-> Penekanan pitch deck: **kopi** — dampak +15% paling meyakinkan.
+> Penekanan pitch deck: **kopi**, dampak +15% paling meyakinkan.
 
 ---
 
@@ -614,16 +614,16 @@ Seluruh angka, regulasi, dan landasan teori dalam dokumen ini telah diverifikasi
 
 | Komponen | Detail |
 |---|---|
-| **Teknologi** | LLM + RAG (Retrieval-Augmented Generation) atas data sendiri — bukan LLM free-form |
+| **Teknologi** | LLM + RAG (Retrieval-Augmented Generation) atas data sendiri, bukan LLM free-form |
 | **Data grounding** | Ledger transaksi, harga acuan BPS/Bapanas, status setoran, SHU |
-| **Scope** | Hanya topik yang punya data — "berapa harga kopi hari ini?" → DB → jawab. Di luar scope → "hubungi operator" |
-| **Anti-halusinasi** | Setiap jawaban bisa ditelusuri ke baris data — near-zero halusinasi |
+| **Scope** | Hanya topik yang punya data. "berapa harga kopi hari ini?" ke DB lalu jawab. Di luar scope: "hubungi operator" |
+| **Anti-halusinasi** | Setiap jawaban bisa ditelusuri ke baris data, near-zero halusinasi |
 | **Voice bot** | STT → Intent → RAG → LLM → TTS. Untuk petani sangat kuno yang tak bisa baca/tekan tombol |
 | **Otomasi tiket** | ~70–80% pertanyaan repetitif dijawab otomatis, sisanya eskalasi ke operator |
 | **Integrasi** | WhatsApp (Baileys) + voice note. Keduanya **live di MVP** |
 
 > [!TIP]
-> **Kenapa bukan AI bebas?** Karena juri akan langsung tanya: *"Gimana kalau AI-nya ngaco? Gimana kalau ngasih harga salah dan petani dirugikan?"* RAG scoped adalah jawabannya: setiap jawaban dari data, setiap jawaban bisa diaudit. Near-zero halusinasi bukan janji — ini properti sistem.
+> **Kenapa bukan AI bebas?** Karena juri akan langsung tanya: *"Gimana kalau AI-nya ngaco? Gimana kalau ngasih harga salah dan petani dirugikan?"* RAG scoped adalah jawabannya: setiap jawaban dari data, setiap jawaban bisa diaudit. Near-zero halusinasi bukan janji, ini properti sistem.
 
 ---
 
@@ -645,7 +645,7 @@ Seluruh angka, regulasi, dan landasan teori dalam dokumen ini telah diverifikasi
   <img src="assets/analisis-pebs.svg" alt="4 Analisis PEBS FEB UI" width="100%"/>
 </div>
 
-**Peran TemuNiaga:** menyediakan **data terstruktur** (ledger, harga, keanggotaan) yang menjadi **input** untuk keempat analisis di atas. TemuNiaga tidak menggantikan analisis — TemuNiaga menyediakan data yang membuat analisis memungkinkan.
+**Peran TemuNiaga:** menyediakan **data terstruktur** (ledger, harga, keanggotaan) yang menjadi **input** untuk keempat analisis di atas. TemuNiaga tidak menggantikan analisis, TemuNiaga menyediakan data yang membuat analisis memungkinkan.
 
 ---
 
@@ -661,10 +661,10 @@ Seluruh angka, regulasi, dan landasan teori dalam dokumen ini telah diverifikasi
 
 | Jebakan | Status TemuNiaga |
 |---|---|
-| **1. Solusi mencari masalah** | ✅ Aman — masalah oligopsoni + farmer's share dulu, software penunjang |
-| **2. Overclaim tanpa baseline** | ✅ Aman — baseline & target eksplisit per komoditas, batas dinyatakan terbuka |
-| **3. Abai inklusivitas** | ✅ Aman — WA bot bertombol + voice bot + operator jembatan manusia |
-| **4. Tidak skalabel di desa** | ✅ Aman — multi-tenant, modular, SOM 10-50 → skalasi bertahap |
+| **1. Solusi mencari masalah** | Aman: masalah oligopsoni + farmer's share dulu, software penunjang |
+| **2. Overclaim tanpa baseline** | Aman: baseline & target eksplisit per komoditas, batas dinyatakan terbuka |
+| **3. Abai inklusivitas** | Aman: WA bot bertombol + voice bot + operator jembatan manusia |
+| **4. Tidak skalabel di desa** | Aman: multi-tenant, modular, SOM 10-50 ke skalasi bertahap |
 
 ---
 
@@ -683,7 +683,7 @@ Seluruh angka, regulasi, dan landasan teori dalam dokumen ini telah diverifikasi
 
 > *Satu Data Indonesia → Dashboard Lintas Kementerian & Daerah → Koperasi Digital (TemuNiaga)*
 
-TemuNiaga bukan aplikasi terpisah — ia adalah **fondasi data transaksi dan keanggotaan di level paling dasar** yang interoperable dengan Simkopdes dan Satu Data Indonesia. Struktur data rapi, bisa diaudit, format konsisten, keamanan data bawaan — bukan hiasan slide.
+TemuNiaga bukan aplikasi terpisah. Ia adalah **fondasi data transaksi dan keanggotaan di level paling dasar** yang interoperable dengan Simkopdes dan Satu Data Indonesia. Struktur data rapi, bisa diaudit, format konsisten, keamanan data bawaan, bukan hiasan slide.
 
 ---
 
