@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" role="img" aria-label="Value Proposition Canvas">
+  <rect width="900" height="520" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Value Proposition Canvas</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Solusi yang menjawab kebutuhan tervalidasi — bukan "kayaknya pengguna butuh ini" yang biasanya jadi awal bencana produk.</text>
+
+  <!-- Left: Customer Profile -->
+  <g transform="translate(40,96)">
+    <rect x="0" y="0" width="380" height="400" rx="12" fill="#0b1220" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#dbeafe">ANGGOTA KOPERASI DESA</text>
+    <text x="20" y="50" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">petani / UMKM · literasi beragam</text>
+
+    <text x="20" y="80" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#60a5fa">🎯 JOBS — apa yang ingin dicapai?</text>
+    <text x="20" y="100" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Menjual hasil panen/produk ke pasar lebih luas</text>
+    <text x="20" y="116" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Dapat harga yang adil, bukan ditekan tengkulak</text>
+    <text x="20" y="132" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Dapat uang cepat untuk kebutuhan keluarga</text>
+
+    <text x="20" y="164" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#ef4444">😤 PAINS — kesulitan yang dialami</text>
+    <text x="20" y="184" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Harga farmgate ditekan oligopsoni (price-taker)</text>
+    <text x="20" y="200" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Volume individu &lt; MOQ pembeli besar</text>
+    <text x="20" y="216" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Tak tahu harga acuan (asimetri informasi)</text>
+    <text x="20" y="232" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Literasi digital rendah, sinyal lemah</text>
+    <text x="20" y="248" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Curiga ke pengurus (KUD lalu bangkrut)</text>
+
+    <text x="20" y="280" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#22c55e">✨ GAINS — manfaat yang diharapkan</text>
+    <text x="20" y="300" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Pendapatan naik (farmgate +10–15%)</text>
+    <text x="20" y="316" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Proses lebih mudah (WA bot, tak perlu aplikasi rumit)</text>
+    <text x="20" y="332" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Transparansi: lihat harga jual &amp; potongan</text>
+    <text x="20" y="348" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• SHU nyata dibagi pro-rata transaksi</text>
+    <text x="20" y="364" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Akses pasar nasional, bukan hanya desa</text>
+  </g>
+
+  <!-- Right: Solution Map -->
+  <g transform="translate(480,96)">
+    <rect x="0" y="0" width="380" height="400" rx="12" fill="#0b1220" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#fde68a">SOLUSI TEMUNIAGA</text>
+    <text x="20" y="50" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">aplikasi dagang untuk koperasi desa</text>
+
+    <text x="20" y="80" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#fcd34d">📦 PRODUK &amp; LAYANAN</text>
+    <text x="20" y="100" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Mesin harga acuan (BPS/Bapanas, transparan)</text>
+    <text x="20" y="116" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Pencocokan stok ↔ RFQ pembeli besar</text>
+    <text x="20" y="132" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Pooling antar-koperasi → tembus MOQ</text>
+    <text x="20" y="148" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• AI asisten RAG (WA + voice bot)</text>
+
+    <text x="20" y="180" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#86efac">💊 PAIN RELIEVERS</text>
+    <text x="20" y="200" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Harga adil dari data resmi → pangkas asimetri</text>
+    <text x="20" y="216" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Agregasi volume → daya tawar kolektif</text>
+    <text x="20" y="232" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Cash cepat via talangan → samai tengkulak</text>
+    <text x="20" y="248" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• WA bot bertombol + voice bot → literasi rendah</text>
+    <text x="20" y="264" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Ledger transparan → cegah korupsi pengurus</text>
+
+    <text x="20" y="296" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#a78bfa">🚀 GAIN CREATORS</text>
+    <text x="20" y="316" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Farmgate naik +10–15% (kopi margin-tebal)</text>
+    <text x="20" y="332" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• SHU pro-rata → residual claimant jadi nyata</text>
+    <text x="20" y="348" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Akses B2B keluar desa (pabrik, ritel, Bulog)</text>
+    <text x="20" y="364" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">• Rantai nilai di desa: mentah → olahan → bermerek</text>
+  </g>
+
+  <text x="40" y="508" font-family="Segoe UI, sans-serif" font-size="11" fill="#64748b">Rumus: "Untuk [anggota] yang mengalikan [masalah], solusi kami menyediakan [fitur inti] yang membantu [hasil] dengan cara [pembeda]."</text>
+</svg>

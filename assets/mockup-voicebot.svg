@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" role="img" aria-label="Mockup voice bot untuk petani kuno">
+  <defs>
+    <linearGradient id="vb_bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b141a"/>
+      <stop offset="1" stop-color="#111b21"/>
+    </linearGradient>
+    <linearGradient id="vb_wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22c55e" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#22c55e" stop-opacity="1"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="#020617"/>
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">Mockup: Voice Bot untuk Petani Sangat Kuno</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#94a3b8">Tak perlu baca, tak perlu tekan tombol. Cukup bicara — AI jawab berdasar data, nol halusinasi.</text>
+
+  <!-- phone frame -->
+  <g transform="translate(260,90)">
+    <rect x="0" y="0" width="280" height="380" rx="32" fill="#0b141a" stroke="#1f2937" stroke-width="3"/>
+    <rect x="8" y="8" width="264" height="364" rx="24" fill="url(#vb_bg)"/>
+
+    <!-- header -->
+    <rect x="8" y="8" width="264" height="44" rx="24" fill="#1f2c33"/>
+    <rect x="8" y="32" width="264" height="20" fill="#1f2c33"/>
+    <circle cx="36" cy="30" r="12" fill="#25d366"/>
+    <text x="36" y="34" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#0b141a" text-anchor="middle">T</text>
+    <text x="56" y="28" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#e9edef">TemuNiaga Voice</text>
+    <text x="56" y="42" font-family="Segoe UI, sans-serif" font-size="9" fill="#8696a0">AI asisten · scoped RAG</text>
+
+    <!-- chat area: voice waveform -->
+    <g transform="translate(20,72)">
+      <rect x="0" y="0" width="240" height="60" rx="12" fill="#1f2c33"/>
+      <text x="12" y="22" font-family="Segoe UI, sans-serif" font-size="10" fill="#8696a0">🎤 Petani bicara:</text>
+      <!-- waveform -->
+      <g transform="translate(12,32)">
+        <rect x="0" y="8" width="3" height="8" rx="1" fill="#22c55e"/>
+        <rect x="6" y="4" width="3" height="16" rx="1" fill="#22c55e"/>
+        <rect x="12" y="0" width="3" height="24" rx="1" fill="#22c55e"/>
+        <rect x="18" y="6" width="3" height="12" rx="1" fill="#22c55e"/>
+        <rect x="24" y="2" width="3" height="20" rx="1" fill="#22c55e"/>
+        <rect x="30" y="8" width="3" height="8" rx="1" fill="#22c55e"/>
+        <rect x="36" y="4" width="3" height="16" rx="1" fill="#22c55e"/>
+        <rect x="42" y="0" width="3" height="24" rx="1" fill="#22c55e"/>
+        <rect x="48" y="6" width="3" height="12" rx="1" fill="#22c55e"/>
+        <rect x="54" y="2" width="3" height="20" rx="1" fill="#22c55e"/>
+        <rect x="60" y="8" width="3" height="8" rx="1" fill="#22c55e"/>
+        <rect x="66" y="4" width="3" height="16" rx="1" fill="#22c55e"/>
+        <rect x="72" y="0" width="3" height="24" rx="1" fill="#22c55e"/>
+        <rect x="78" y="6" width="3" height="12" rx="1" fill="#22c55e"/>
+        <rect x="84" y="2" width="3" height="20" rx="1" fill="#22c55e"/>
+        <rect x="90" y="8" width="3" height="8" rx="1" fill="#22c55e"/>
+        <rect x="96" y="4" width="3" height="16" rx="1" fill="#22c55e"/>
+        <rect x="102" y="0" width="3" height="24" rx="1" fill="#22c55e"/>
+        <rect x="108" y="6" width="3" height="12" rx="1" fill="#22c55e"/>
+        <rect x="114" y="2" width="3" height="20" rx="1" fill="#22c55e"/>
+        <rect x="120" y="8" width="3" height="8" rx="1" fill="#22c55e"/>
+        <rect x="126" y="4" width="3" height="16" rx="1" fill="#22c55e"/>
+        <rect x="132" y="0" width="3" height="24" rx="1" fill="#22c55e"/>
+        <rect x="138" y="6" width="3" height="12" rx="1" fill="#22c55e"/>
+        <rect x="144" y="2" width="3" height="20" rx="1" fill="#22c55e"/>
+        <rect x="150" y="8" width="3" height="8" rx="1" fill="#22c55e"/>
+        <rect x="156" y="4" width="3" height="16" rx="1" fill="#22c55e"/>
+        <rect x="162" y="0" width="3" height="24" rx="1" fill="#22c55e"/>
+        <rect x="168" y="6" width="3" height="12" rx="1" fill="#22c55e"/>
+        <rect x="174" y="2" width="3" height="20" rx="1" fill="#22c55e"/>
+        <rect x="180" y="8" width="3" height="8" rx="1" fill="#22c55e"/>
+        <rect x="186" y="4" width="3" height="16" rx="1" fill="#22c55e"/>
+        <rect x="192" y="0" width="3" height="24" rx="1" fill="#22c55e"/>
+        <rect x="198" y="6" width="3" height="12" rx="1" fill="#22c55e"/>
+        <rect x="204" y="2" width="3" height="20" rx="1" fill="#22c55e"/>
+        <rect x="210" y="8" width="3" height="8" rx="1" fill="#22c55e"/>
+      </g>
+      <text x="12" y="54" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">"Berapa harga kopi saya hari ini?"</text>
+    </g>
+
+    <!-- AI response bubble -->
+    <g transform="translate(20,148)">
+      <rect x="0" y="0" width="240" height="100" rx="12" fill="#005c4b"/>
+      <text x="12" y="22" font-family="Segoe UI, sans-serif" font-size="10" fill="#aebac0">🔊 TemuNiaga jawab:</text>
+      <text x="12" y="42" font-family="Segoe UI, sans-serif" font-size="11" fill="#e9edef">"Harga kopi ceri grade A</text>
+      <text x="12" y="58" font-family="Segoe UI, sans-serif" font-size="11" fill="#e9edef">di Bali hari ini Rp8.500</text>
+      <text x="12" y="74" font-family="Segoe UI, sans-serif" font-size="11" fill="#e9edef">sampai Rp9.000 per kilo.</text>
+      <text x="12" y="90" font-family="Segoe UI, sans-serif" font-size="9" fill="#86efac">Sumber: Bapanas · 29 Jun 2026"</text>
+    </g>
+
+    <!-- mic button -->
+    <g transform="translate(108,270)">
+      <circle cx="32" cy="32" r="30" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+      <path d="M32 16 C28 16 24 20 24 26 L24 34 C24 38 28 42 32 42 C36 42 40 38 40 34 L40 26 C40 20 36 16 32 16 Z" fill="#22c55e"/>
+      <path d="M20 32 C20 40 26 46 32 46 C38 46 44 40 44 32" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="32" y1="46" x2="32" y2="52" stroke="#22c55e" stroke-width="2"/>
+      <text x="32" y="84" font-family="Segoe UI, sans-serif" font-size="9" fill="#86efac" text-anchor="middle">Tekan untuk bicara</text>
+    </g>
+
+    <!-- RAG badge -->
+    <g transform="translate(20,348)">
+      <rect x="0" y="0" width="240" height="22" rx="6" fill="#052e16" stroke="#22c55e" stroke-width="0.8"/>
+      <text x="120" y="15" font-family="Segoe UI, sans-serif" font-size="9" font-weight="600" fill="#86efac" text-anchor="middle">✓ RAG scoped · jawaban dari data · nol halusinasi</text>
+    </g>
+  </g>
+
+  <!-- flow annotation -->
+  <g transform="translate(40,180)" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">
+    <text x="0" y="0" font-weight="600" fill="#22c55e">Alur:</text>
+    <text x="0" y="20">1. Petani bicara (bahasa apa)</text>
+    <text x="0" y="38">2. STT: speech → teks</text>
+    <text x="0" y="56">3. Intent: "cek harga"</text>
+    <text x="0" y="74">4. RAG: query DB harga</text>
+    <text x="0" y="92">5. LLM: format jawaban</text>
+    <text x="0" y="110">6. TTS: teks → suara</text>
+    <text x="0" y="128">7. Petani dengar harga</text>
+  </g>
+
+  <g transform="translate(580,180)" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">
+    <text x="0" y="0" font-weight="600" fill="#fbbf24">Anti-halusinasi:</text>
+    <text x="0" y="20">Scope = hanya data sendiri</text>
+    <text x="0" y="38">(ledger, harga, status)</text>
+    <text x="0" y="56">Di luar scope → "saya tidak</text>
+    <text x="0" y="74">tahu, hubungi operator"</text>
+    <text x="0" y="100" font-weight="600" fill="#3b82f6">Otomasi tiket:</text>
+    <text x="0" y="118">~70-80% repetitif</text>
+    <text x="0" y="136">→ jawab otomatis</text>
+  </g>
+</svg>

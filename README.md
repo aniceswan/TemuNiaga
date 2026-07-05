@@ -248,7 +248,7 @@ Kopdes dapat memilih 4 mode penyerapan berikut secara fleksibel berdasarkan kara
 
 > [!NOTE]
 > **STATUS MOCKUP: PRATINJAU KONSEP (CONCEPT PREVIEW)**  
-> Seluruh gambar, mockup antarmuka (WhatsApp bot, dashboard, portal B2B), dan diagram alur di dalam dokumen ini adalah **ilustrasi pratinjau konsep operasional (concept preview)** yang ditujukan untuk mendemonstrasikan logika bisnis di hadapan dewan juri, **bukan representasi tampilan antarmuka (UI) final**.
+> Seluruh gambar, mockup antarmuka (WhatsApp bot, voice bot, dashboard, portal B2B), dan diagram alur di dalam dokumen ini adalah **ilustrasi pratinjau konsep operasional (concept preview)** yang ditujukan untuk mendemonstrasikan logika bisnis di hadapan dewan juri, **bukan representasi tampilan antarmuka (UI) final**.
 
 #### 1. WhatsApp Bot Bertombol (Anggota)
 Antarmuka sadar-kondisi untuk petani dengan literasi digital rendah. Didukung menu interaktif bertombol (quick-reply) untuk mempercepat pelaporan pasokan dan pengecekan harga BPS.
@@ -259,7 +259,16 @@ Antarmuka sadar-kondisi untuk petani dengan literasi digital rendah. Didukung me
 
 ---
 
-#### 2. Dashboard Web Operator Kopdes
+#### 2. Voice Bot (Petani Sangat Kuno)
+Tak perlu baca, tak perlu tekan tombol. Cukup bicara — AI jawab berdasar data, nol halusinasi. STT → RAG → TTS. **Masuk MVP (live demo).**
+
+<div align="center">
+  <img src="assets/mockup-voicebot.svg" alt="Mockup Voice Bot" width="100%"/>
+</div>
+
+---
+
+#### 3. Dashboard Web Operator Kopdes
 Pusat komando operasional pengurus Kopdes. Menampilkan posisi kas dari pinjaman PMK 49/2025, tabel rekapitulasi grading manual di titik terima, serta status matching Algoritma A secara real-time.
 
 <div align="center">
@@ -268,7 +277,7 @@ Pusat komando operasional pengurus Kopdes. Menampilkan posisi kas dari pinjaman 
 
 ---
 
-#### 3. Portal RFQ Pembeli Besar B2B
+#### 4. Portal RFQ Pembeli Besar B2B
 Pintu gerbang pembeli berskala industri (pabrik pengolahan, Bulog, ritel modern). Memfasilitasi pengajuan RFQ spesifik (komoditas, MOQ, grade), sistem pooling stok antar-koperasi, dan jaminan keamanan escrow Bank Himbara.
 
 <div align="center">
@@ -311,8 +320,8 @@ flowchart TB
 Jika data farmgate kosong, sistem terpaksa memakai rumus `Harga Grosir - (Biaya Logistik + Sortir + Margin)`. Kami tegaskan formula ini memiliki 3 cacat bawaan sehingga tidak dijadikan metode utama: (1) Double Counting Margin: Harga grosir sudah memuat margin pedagang kota; (2) Basis Regional: Perbedaan letak geografis kota konsumsi vs desa produksi memicu deviasi estimasi; (3) Mismatch Mutu: Harga grosir mewakili lot tersortir bersih, sedangkan panen farmgate masih basah atau kotor.
 
 > [!NOTE]
-> **Transparansi ML (Bukan AI):**  
-> Sistem menyertakan modul Machine Learning (ML) deret waktu (time-series) untuk memprakirakan tren harga 1 sampai 2 minggu ke depan. Modul ini secara sadar disebut Machine Learning, bukan dibesar-besarkan sebagai AI, demi menjaga kejujuran akademis. Fungsinya sebatas asisten pendukung keputusan jual, bukan penentu harga mutlak.
+> **AI Asisten RAG (Grounded Data, Nol Halusinasi):**  
+> Sistem menyertakan asisten AI berbasis LLM + RAG (Retrieval-Augmented Generation) atas data sendiri (ledger, harga, status transaksi). AI hanya menjawab dari data aplikasi — bukan mengarang, bukan LLM free-form. Setiap jawaban bisa ditelusuri ke baris data. Modul ML time-series opsional untuk prakiraan tren 1–2 minggu. Detail di §Asisten AI.
 
 ---
 
@@ -349,6 +358,7 @@ Sistem mengusung arsitektur Enterprise Modular yang terukur (scalable), tangguh 
 graph TB
     subgraph CLIENT ["CLIENT LAYER (Multi-Kanal)"]
         WA["WhatsApp Bot<br/>(Baileys Quick-Reply)"]
+        VOICE["Voice Bot<br/>(STT → RAG → TTS)"]
         WEB["Web Application<br/>(Anggota & Operator)"]
         PORTAL["Portal Pembeli B2B<br/>(RFQ Engine)"]
     end
@@ -362,7 +372,14 @@ graph TB
         SVC_MATCH["Matching Service<br/>(Algoritma A: Stok ↔ RFQ)"]
         SVC_HARGA["Pricing Service<br/>(Algoritma B: Mesin Harga)"]
         SVC_LEDGER["Ledger Service<br/>(Transparansi & Rekap SHU)"]
+        SVC_AI["AI Service<br/>(LLM + RAG Scoped)"]
         SVC_NOTIF["Notification Service<br/>(WA Bot & Email Alerts)"]
+    end
+
+    subgraph AI_LAYER ["AI LAYER (RAG — Anti-Halusinasi)"]
+        DIR["Data grounding<br/>ledger · harga · status"]
+        SCOPE["Scope ketat<br/>hanya topik dengan data"]
+        RETRIEVAL["Retrieval<br/>(vector embeddings)"]
     end
 
     subgraph DATA ["DATA LAYER & CACHING"]
@@ -383,13 +400,17 @@ graph TB
     end
 
     WA & WEB & PORTAL --> REST
-    REST --> SVC_AUTH & SVC_MATCH & SVC_HARGA & SVC_LEDGER & SVC_NOTIF
+    WA & VOICE & WEB & PORTAL --> REST
+    REST --> SVC_AUTH & SVC_MATCH & SVC_HARGA & SVC_AI & SVC_LEDGER & SVC_NOTIF
     SVC_MATCH & SVC_LEDGER & SVC_AUTH --> DB
     SVC_HARGA --> CACHE
+    SVC_AI --> DIR & RETRIEVAL
+    DIR & RETRIEVAL --> SCOPE
+    SCOPE --> DB
     SVC_NOTIF --> QUEUE
     CACHE -. "Fetch Monthly Anchor" .-> BPS
     CACHE -. "Fetch Daily Layers" .-> BAPANAS
-    SVC_AUTH & SVC_MATCH & SVC_HARGA & SVC_LEDGER -. "Telemetry" .-> LOG & MET & TRC
+    SVC_AUTH & SVC_MATCH & SVC_HARGA & SVC_AI & SVC_LEDGER -. "Telemetry" .-> LOG & MET & TRC
 
     style CLIENT fill:#0f172a,stroke:#334155,color:#f8fafc
     style GATEWAY fill:#0f172a,stroke:#334155,color:#f8fafc
@@ -397,13 +418,17 @@ graph TB
     style DATA fill:#0f172a,stroke:#334155,color:#f8fafc
     style EXTERNAL fill:#0f172a,stroke:#334155,color:#f8fafc
     style OBSERVABILITY fill:#0f172a,stroke:#334155,color:#f8fafc
+    style AI_LAYER fill:#1e1b4b,stroke:#a78bfa,color:#c4b5fd
     style SVC_HARGA fill:#78350f,stroke:#fbbf24,color:#ffffff
     style SVC_MATCH fill:#1e3a8a,stroke:#3b82f6,color:#ffffff
+    style SVC_AI fill:#4c1d95,stroke:#a78bfa,color:#e9d5ff
     style SVC_LEDGER fill:#052e16,stroke:#22c55e,color:#ffffff
 ```
 
 #### Prinsip Arsitektur Enterprise MVP:
-- **Modular Micro-Services**: Layanan otentikasi, matching, harga, ledger, dan notifikasi dipisah secara modular agar dapat diskalakan secara independen.
+- **Modular Micro-Services**: Layanan otentikasi, matching, harga, ledger, AI, dan notifikasi dipisah secara modular agar dapat diskalakan secara independen.
+- **AI Service (RAG Scoped)**: LLM + Retrieval-Augmented Generation dengan grounding data sendiri (ledger, harga, status transaksi). Scope ketat — hanya menjawab topik yang punya data. Di luar scope → "hubungi operator". Setiap jawaban bisa ditelusuri ke baris data (nol halusinasi).
+- **Voice Bot Pipeline**: STT → Intent Classification → RAG Query → LLM Format → TTS. Semua berbasis data, bukan free-form.
 - **Granular RBAC**: Pemisahan hak akses tegas antara Petani, Operator Kopdes, Pengawas, dan Pembeli B2B.
 - **Multi-Tenant Database**: Skema PostgreSQL didesain mendukung agregasi dan pooling stok antar-koperasi secara nasional.
 - **Resilience via Caching**: Menggunakan Redis Cache untuk menyimpan data BPS/Bapanas, memastikan aplikasi tetap beroperasi lancar meskipun API pemerintah mengalami downtime atau pemeliharaan.
@@ -523,6 +548,158 @@ Seluruh angka, regulasi, dan landasan teori dalam dokumen ini telah diverifikasi
 
 ---
 
+## BAGIAN 3: MENTORSHIP ADDITIONS — Data, Pitch & Strategy
+
+### A. Jurang Terdaftar vs Hidup (Data SimkopDes Juni 2026)
+
 <div align="center">
-  <p><sub><strong>TemuNiaga</strong> • Hak Cipta &copy; 2026 Koperasi Desa Merah Putih & Tim Pengembang. Dipersiapkan untuk Hackathon Digital Cooperatives Expo 2026.</sub></p>
+  <img src="assets/jurang-terdaftar.svg" alt="Jurang terdaftar vs bertransaksi" width="100%"/>
+</div>
+
+> [!IMPORTANT]
+> **Hanya ~1% KDKMP yang benar-benar bertransaksi.** Inilah ruang nyata bagi TemuNiaga: menjadikan Kopdes transisi dari *"terdaftar"* ke *"hidup"* dengan mesin ekonomi operasional.
+
+---
+
+### B. Kriteria Juri & Format Pitch
+
+<div align="center">
+  <img src="assets/kriteria-juri.svg" alt="Kriteria juri dan bobot" width="100%"/>
+</div>
+
+**Rumus dampak TemuNiaga (mengikuti format mentor):**
+
+| Komoditas | Baseline | Target | Petani | Dampak/tahun | Waktu |
+|---|---|---|---|---|---|
+| **Kopi** (hero pitch) | Rp6.000/kg | Rp6.900/kg (+15%) | 500 × 800 kg/th | **+Rp360 juta/th** | 6 bln |
+| **Beras** | Rp6.925/kg | Rp7.133/kg (+3%) | 1.000 × 2.000 kg/th | **+Rp416 juta/th** | 12 bln |
+| **Singkong** | Rp1.350/kg | Rp1.500/kg (+11%) | 300 × 5.000 kg/th | **+Rp225 juta/th** | 6 bln |
+
+> Penekanan pitch deck: **kopi** — dampak +15% paling meyakinkan.
+
+---
+
+### C. TAM · SAM · SOM
+
+<div align="center">
+  <img src="assets/tam-sam-som.svg" alt="TAM SAM SOM" width="100%"/>
+</div>
+
+---
+
+### D. Value Proposition Canvas
+
+<div align="center">
+  <img src="assets/value-proposition.svg" alt="Value Proposition Canvas" width="100%"/>
+</div>
+
+> **Rumus:** *"Untuk anggota koperasi desa yang kesulitan mengakses pasar dan mendapat harga adil, solusi kami menyediakan platform dagang yang mencatat transaksi, mencocokkan permintaan-stok, dan membuka akses pembeli besar secara transparan dengan harga dari data resmi."*
+
+---
+
+### E. Asisten AI: RAG Scoped + Voice Bot
+
+| Komponen | Detail |
+|---|---|
+| **Teknologi** | LLM + RAG (Retrieval-Augmented Generation) atas data sendiri — bukan LLM free-form |
+| **Data grounding** | Ledger transaksi, harga acuan BPS/Bapanas, status setoran, SHU |
+| **Scope** | Hanya topik yang punya data — "berapa harga kopi hari ini?" → DB → jawab. Di luar scope → "hubungi operator" |
+| **Anti-halusinasi** | Setiap jawaban bisa ditelusuri ke baris data — nol halusinasi |
+| **Voice bot** | STT → Intent → RAG → LLM → TTS. Untuk petani sangat kuno yang tak bisa baca/tekan tombol |
+| **Otomasi tiket** | ~70–80% pertanyaan repetitif dijawab otomatis, sisanya eskalasi ke operator |
+| **Integrasi** | WhatsApp (Baileys) + voice note. Keduanya **live di MVP** |
+
+> [!TIP]
+> **Kenapa bukan AI bebas?** Karena juri akan langsung tanya: *"Gimana kalau AI-nya ngaco? Gimana kalau ngasih harga salah dan petani dirugikan?"* RAG scoped adalah jawabannya: setiap jawaban dari data, setiap jawaban bisa diaudit. Nol halusinasi bukan janji — ini properti sistem.
+
+---
+
+### F. Model Bisnis Produk
+
+| Stream | Siapa bayar | Besaran |
+|---|---|---|
+| **Gratis untuk Kopdes kecil** | — | Rp0 (adopsi cepat, jawab inklusivitas) |
+| **Transaction fee B2B** | Pembeli / Kopdes matang | % kecil dari margin deal yang berhasil dicocokkan |
+| **Premium analytics (fase 2)** | Koperasi sekunder / pembeli besar | SaaS fee untuk dashboard pasar, prediksi tren |
+
+> **Mengapa hybrid:** Kopdes kecil gratis onboarding → memutus pola KUD bergantung subsidi. Transaction fee self-sustaining (makin banyak jual, makin untung kedua pihak). Fee dipotong dari margin deal, **bukan dari kantong Kopdes kecil**.
+
+---
+
+### G. Empat Analisis PEBS FEB UI
+
+<div align="center">
+  <img src="assets/analisis-pebs.svg" alt="4 Analisis PEBS FEB UI" width="100%"/>
+</div>
+
+**Peran TemuNiaga:** menyediakan **data terstruktur** (ledger, harga, keanggotaan) yang menjadi **input** untuk keempat analisis di atas. TemuNiaga tidak menggantikan analisis — TemuNiaga menyediakan data yang membuat analisis memungkinkan.
+
+---
+
+### H. Benchmark Global
+
+<div align="center">
+  <img src="assets/benchmark-global.svg" alt="Benchmark koperasi global" width="100%"/>
+</div>
+
+---
+
+### I. Empat Jebakan Klasik (dan jawaban TemuNiaga)
+
+| Jebakan | Status TemuNiaga |
+|---|---|
+| **1. Solusi mencari masalah** | ✅ Aman — masalah oligopsoni + farmer's share dulu, software penunjang |
+| **2. Overclaim tanpa baseline** | ✅ Aman — baseline & target eksplisit per komoditas, batas dinyatakan terbuka |
+| **3. Abai inklusivitas** | ✅ Aman — WA bot bertombol + voice bot + operator jembatan manusia |
+| **4. Tidak skalabel di desa** | ✅ Aman — multi-tenant, modular, SOM 10-50 → skalasi bertahap |
+
+---
+
+### J. Indikator Dampak 4 Dimensi
+
+| Dimensi | Indikator | Sumber Data |
+|---|---|---|
+| **Ekonomi** | Volume usaha, pendapatan, efisiensi | SimkopDes / ledger TemuNiaga |
+| **Partisipasi** | Anggota aktif baru, keterlibatan digital | Data keanggotaan, log penggunaan |
+| **Inklusi** | Akses pembiayaan, literasi keuangan | Survei pengguna, data simpan pinjam |
+| **Keberlanjutan** | Retensi pengguna, skalabilitas | Data adopsi, studi replikasi |
+
+---
+
+### K. Visi Ekosistem Data Nasional
+
+> *Satu Data Indonesia → Dashboard Lintas Kementerian & Daerah → Koperasi Digital (TemuNiaga)*
+
+TemuNiaga bukan aplikasi terpisah — ia adalah **fondasi data transaksi dan keanggotaan di level paling dasar** yang interoperable dengan Simkopdes dan Satu Data Indonesia. Struktur data rapi, bisa diaudit, format konsisten, keamanan data bawaan — bukan hiasan slide.
+
+---
+
+### L. Struktur Pitch Deck Final (11 Slide)
+
+```
+1. Masalah (795/83.000, oligopsoni, farmer's share 32%)
+2. Bukti dari data (sumber resmi, baseline per komoditas)
+3. Solusi & value proposition (TemuNiaga = mesin ekonomi)
+4. Cara kerja (alur 11 langkah, 3 aktor, 4 fungsi + AI voice bot)
+5. Dampak terukur (baseline → target per komoditas, format mentor)
+6. Pasar: TAM / SAM / SOM
+7. Model bisnis (hybrid freemium + transaction fee)
+8. Strategi implementasi (pilot → evaluasi → skalasi)
+9. Risiko & mitigasi (R1–R12 + 4 jebakan)
+10. Tim
+11. Visi: ekosistem data nasional + benchmark Amul
+```
+
+---
+
+### M. Catatan Sejarah KUD & Pelajaran
+
+- Baru **~35% koperasi aktif** rutin menggelar RAT (basis akuntabilitas)
+- KUD era lalu banyak **runtuh karena subsidi + tata kelola lemah**
+- TemuNiaga dirancang untuk **memutus pola lama**: ledger transparan (bukan RAT formalitas), SHU pro-rata (bukan ditahan), AI grounded data (bukan mengira-ngira), model bisnis mandiri (bukan subsidi)
+
+<div align="center">
+  <p><sub><strong>TemuNiaga</strong> • Disiapkan untuk Hackathon Digital Cooperatives Expo 2026 · Pilar 3</sub><br/>
+  <sub>Kementerian Koperasi RI × PEBS FEB Universitas Indonesia</sub><br/>
+  <sub><em>Temu penjual & pembeli · Niaga desa ke pasar nasional</em></sub></p>
 </div>
