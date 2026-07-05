@@ -37,6 +37,20 @@
   - [Matriks Analisis Risiko & Penanggulangan (R1–R12)](#matriks-analisis-risiko--penanggulangan-r1r12)
   - [Posisi Terhadap Simkopdes & Model Keberlanjutan Finansial](#posisi-terhadap-simkopdes--model-keberlanjutan-finansial)
   - [Daftar Sumber Terverifikasi & Teori Ekonomi](#daftar-sumber-terverifikasi--teori-ekonomi)
+- [BAGIAN 3: MENTORSHIP ADDITIONS — Data, Pitch & Strategy](#bagian-3-mentorship-additions--data-pitch--strategy)
+  - [A. Jurang Terdaftar vs Hidup (Data SimkopDes Juni 2026)](#a-jurang-terdaftar-vs-hidup-data-simkopdes-juni-2026)
+  - [B. Kriteria Juri & Format Pitch](#b-kriteria-juri--format-pitch)
+  - [C. TAM · SAM · SOM](#c-tam--sam--som)
+  - [D. Value Proposition Canvas](#d-value-proposition-canvas)
+  - [E. Asisten AI: RAG Scoped + Voice Bot](#e-asisten-ai-rag-scoped--voice-bot)
+  - [F. Model Bisnis Produk](#f-model-bisnis-produk)
+  - [G. Empat Analisis PEBS FEB UI](#g-empat-analisis-pebs-feb-ui)
+  - [H. Benchmark Global](#h-benchmark-global)
+  - [I. Empat Jebakan Klasik (dan jawaban TemuNiaga)](#i-empat-jebakan-klasik-dan-jawaban-temuniaga)
+  - [J. Indikator Dampak 4 Dimensi](#j-indikator-dampak-4-dimensi)
+  - [K. Visi Ekosistem Data Nasional](#k-visi-ekosistem-data-nasional)
+  - [L. Struktur Pitch Deck Final (11 Slide)](#l-struktur-pitch-deck-final-11-slide)
+  - [M. Catatan Sejarah KUD & Pelajaran](#m-catatan-sejarah-kud--pelajaran)
 
 ---
 
@@ -260,7 +274,7 @@ Antarmuka sadar-kondisi untuk petani dengan literasi digital rendah. Didukung me
 ---
 
 #### 2. Voice Bot (Petani Sangat Kuno)
-Tak perlu baca, tak perlu tekan tombol. Cukup bicara — AI jawab berdasar data, nol halusinasi. STT → RAG → TTS. **Masuk MVP (live demo).**
+Tak perlu baca, tak perlu tekan tombol. Cukup bicara — AI jawab berdasar data, near-zero halusinasi. STT → RAG → TTS. **Masuk MVP (live demo).**
 
 <div align="center">
   <img src="assets/mockup-voicebot.svg" alt="Mockup Voice Bot" width="100%"/>
@@ -399,7 +413,6 @@ graph TB
         TRC["OpenTelemetry Tracing"]
     end
 
-    WA & WEB & PORTAL --> REST
     WA & VOICE & WEB & PORTAL --> REST
     REST --> SVC_AUTH & SVC_MATCH & SVC_HARGA & SVC_AI & SVC_LEDGER & SVC_NOTIF
     SVC_MATCH & SVC_LEDGER & SVC_AUTH --> DB
@@ -427,7 +440,7 @@ graph TB
 
 #### Prinsip Arsitektur Enterprise MVP:
 - **Modular Micro-Services**: Layanan otentikasi, matching, harga, ledger, AI, dan notifikasi dipisah secara modular agar dapat diskalakan secara independen.
-- **AI Service (RAG Scoped)**: LLM + Retrieval-Augmented Generation dengan grounding data sendiri (ledger, harga, status transaksi). Scope ketat — hanya menjawab topik yang punya data. Di luar scope → "hubungi operator". Setiap jawaban bisa ditelusuri ke baris data (nol halusinasi).
+- **AI Service (RAG Scoped)**: LLM + Retrieval-Augmented Generation dengan grounding data sendiri (ledger, harga, status transaksi). Scope ketat — hanya menjawab topik yang punya data. Di luar scope → "hubungi operator". Setiap jawaban bisa ditelusuri ke baris data (near-zero halusinasi).
 - **Voice Bot Pipeline**: STT → Intent Classification → RAG Query → LLM Format → TTS. Semua berbasis data, bukan free-form.
 - **Granular RBAC**: Pemisahan hak akses tegas antara Petani, Operator Kopdes, Pengawas, dan Pembeli B2B.
 - **Multi-Tenant Database**: Skema PostgreSQL didesain mendukung agregasi dan pooling stok antar-koperasi secara nasional.
@@ -604,13 +617,13 @@ Seluruh angka, regulasi, dan landasan teori dalam dokumen ini telah diverifikasi
 | **Teknologi** | LLM + RAG (Retrieval-Augmented Generation) atas data sendiri — bukan LLM free-form |
 | **Data grounding** | Ledger transaksi, harga acuan BPS/Bapanas, status setoran, SHU |
 | **Scope** | Hanya topik yang punya data — "berapa harga kopi hari ini?" → DB → jawab. Di luar scope → "hubungi operator" |
-| **Anti-halusinasi** | Setiap jawaban bisa ditelusuri ke baris data — nol halusinasi |
+| **Anti-halusinasi** | Setiap jawaban bisa ditelusuri ke baris data — near-zero halusinasi |
 | **Voice bot** | STT → Intent → RAG → LLM → TTS. Untuk petani sangat kuno yang tak bisa baca/tekan tombol |
 | **Otomasi tiket** | ~70–80% pertanyaan repetitif dijawab otomatis, sisanya eskalasi ke operator |
 | **Integrasi** | WhatsApp (Baileys) + voice note. Keduanya **live di MVP** |
 
 > [!TIP]
-> **Kenapa bukan AI bebas?** Karena juri akan langsung tanya: *"Gimana kalau AI-nya ngaco? Gimana kalau ngasih harga salah dan petani dirugikan?"* RAG scoped adalah jawabannya: setiap jawaban dari data, setiap jawaban bisa diaudit. Nol halusinasi bukan janji — ini properti sistem.
+> **Kenapa bukan AI bebas?** Karena juri akan langsung tanya: *"Gimana kalau AI-nya ngaco? Gimana kalau ngasih harga salah dan petani dirugikan?"* RAG scoped adalah jawabannya: setiap jawaban dari data, setiap jawaban bisa diaudit. Near-zero halusinasi bukan janji — ini properti sistem.
 
 ---
 
