@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" role="img" aria-label="State machine PO digital">
+  <rect width="900" height="420" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">State Machine PO Digital &amp; Transaksi B2B</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Dari matching stok ke buyer sampai settlement &amp; SHU. Setiap transisi via tombol di dashboard, bukan otomatis.</text>
+
+  <!-- Phase labels -->
+  <text x="40" y="105" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#22c55e">PROCUREMENT</text>
+  <line x1="40" y1="110" x2="150" y2="110" stroke="#22c55e" stroke-width="2"/>
+
+  <text x="320" y="105" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#3b82f6">SALES &amp; DELIVERY</text>
+  <line x1="320" y1="110" x2="480" y2="110" stroke="#3b82f6" stroke-width="2"/>
+
+  <text x="680" y="105" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#fbbf24">SETTLEMENT</text>
+  <line x1="680" y1="110" x2="790" y2="110" stroke="#fbbf24" stroke-width="2"/>
+
+  <!-- STATE MACHINE BOXES -->
+  <!-- Procurement: stok -->
+  <g transform="translate(60,130)">
+    <rect x="0" y="0" width="100" height="50" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="50" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#86efac" text-anchor="middle">STOK SIAP</text>
+    <text x="50" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#4ade80" text-anchor="middle">in_warehouse</text>
+  </g>
+
+  <!-- Arrow: stok → matching -->
+  <line x1="160" y1="155" x2="205" y2="155" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="205,155 200,152 200,158" fill="#475569"/>
+
+  <!-- Matching -->
+  <g transform="translate(210,130)">
+    <rect x="0" y="0" width="120" height="50" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="60" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#93c5fd" text-anchor="middle">MATCHING</text>
+    <text x="60" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Algoritma A</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="330" y1="155" x2="395" y2="155" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="395,155 390,152 390,158" fill="#475569"/>
+
+  <!-- PO draft -->
+  <g transform="translate(400,130)">
+    <rect x="0" y="0" width="110" height="50" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <text x="55" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#cbd5e1" text-anchor="middle">PO DRAFT</text>
+    <text x="55" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">system generate</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="510" y1="155" x2="555" y2="155" stroke="#3b82f6" stroke-width="1.5"/>
+  <polygon points="555,155 550,152 550,158" fill="#3b82f6"/>
+
+  <!-- PO confirmed -->
+  <g transform="translate(560,130)">
+    <rect x="0" y="0" width="120" height="50" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#dbeafe" text-anchor="middle">CONFIRMED</text>
+    <text x="60" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#93c5fd" text-anchor="middle">buyer konfirmasi</text>
+  </g>
+
+  <!-- Arrow down to second row -->
+  <line x1="620" y1="180" x2="620" y2="215" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="620,215 616,210 624,210" fill="#475569"/>
+
+  <!-- Row 2: shipped -->
+  <g transform="translate(560,220)">
+    <rect x="0" y="0" width="120" height="50" rx="10" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+    <text x="60" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#fde68a" text-anchor="middle">SHIPPED</text>
+    <text x="60" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#fcd34d" text-anchor="middle">kopdes kirim</text>
+  </g>
+
+  <!-- Arrow left -->
+  <line x1="555" y1="245" x2="450" y2="245" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- Delivered -->
+  <g transform="translate(305,220)">
+    <rect x="0" y="0" width="140" height="50" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+    <text x="70" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#bbf7d0" text-anchor="middle">DELIVERED</text>
+    <text x="70" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#86efac" text-anchor="middle">buyer terima [QC OK]</text>
+  </g>
+
+  <!-- Arrow to completed -->
+  <line x1="300" y1="245" x2="215" y2="245" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="215,245 220,241 220,249" fill="#22c55e"/>
+
+  <!-- Completed -->
+  <g transform="translate(80,220)">
+    <rect x="0" y="0" width="130" height="50" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="2.5"/>
+    <text x="65" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#86efac" text-anchor="middle">COMPLETED</text>
+    <text x="65" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#4ade80" text-anchor="middle">escrow release</text>
+  </g>
+
+  <!-- DISPUTE branch -->
+  <line x1="375" y1="270" x2="375" y2="310" stroke="#ef4444" stroke-width="1.5"/>
+  <polygon points="375,310 371,305 379,305" fill="#ef4444"/>
+
+  <!-- Dispute state -->
+  <g transform="translate(300,315)">
+    <rect x="0" y="0" width="150" height="45" rx="10" fill="#7f1d1a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="75" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#fca5a5" text-anchor="middle">DISPUTED</text>
+    <text x="75" y="37" font-family="Segoe UI, sans-serif" font-size="9" fill="#f87171" text-anchor="middle">buyer tolak [need QC]</text>
+  </g>
+
+  <!-- Arrow to resolution -->
+  <line x1="295" y1="337" x2="170" y2="337" stroke="#fbbf24" stroke-width="1.5"/>
+  <polygon points="170,337 175,333 175,341" fill="#fbbf24"/>
+
+  <!-- Resolution -->
+  <g transform="translate(40,315)">
+    <rect x="0" y="0" width="125" height="45" rx="10" fill="#78350f" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="62" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#fde68a" text-anchor="middle">NEGOTIATING</text>
+    <text x="62" y="37" font-family="Segoe UI, sans-serif" font-size="9" fill="#fcd34d" text-anchor="middle">penyesuaian harga</text>
+  </g>
+
+  <!-- Arrow back to completed -->
+  <path d="M 62 315 Q 62 280 145 245" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <polygon points="145,245 140,248 140,242" fill="#22c55e"/>
+
+  <!-- Legend -->
+  <g transform="translate(500,325)" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">
+    <text x="0" y="0" font-weight="700" fill="#f8fafc">Siapa menekan tombol?</text>
+    <rect x="0" y="10" width="10" height="10" rx="2" fill="#3b82f6"/>
+    <text x="16" y="18">Buyer: konfirmasi, terima, tolak</text>
+    <rect x="0" y="28" width="10" height="10" rx="2" fill="#fbbf24"/>
+    <text x="16" y="36">Kopdes: siapkan, kirim, setuju harga baru</text>
+    <rect x="0" y="46" width="10" height="10" rx="2" fill="#22c55e"/>
+    <text x="16" y="54">System: generate PO via Algoritma A, settlement</text>
+  </g>
+
+  <text x="40" y="400" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">Alur lengkap dari procurement ke settlement. Detail di ENHANCED_ALUR.md. Untuk MVP: draft → confirmed → shipped → delivered → completed / disputed.</text>
+</svg>

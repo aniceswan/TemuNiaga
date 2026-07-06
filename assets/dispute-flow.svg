@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-label="Dispute dan rejection flow">
+  <rect width="800" height="400" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Dispute dan Rejection Handling</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Buyer tolak barang. Empat jalur resolusi. MVP: Jalur 1 (Penyesuaian Harga).</text>
+
+  <!-- Trigger -->
+  <g transform="translate(40,100)">
+    <rect x="0" y="0" width="160" height="50" rx="10" fill="#7f1d1a" stroke="#ef4444" stroke-width="2"/>
+    <text x="80" y="22" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#fca5a5" text-anchor="middle">BUYER TOLAK</text>
+    <text x="80" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#f87171" text-anchor="middle">input alasan + foto</text>
+  </g>
+
+  <!-- Arrow to disputed -->
+  <line x1="200" y1="125" x2="255" y2="125" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="255,125 250,122 250,128" fill="#ef4444"/>
+
+  <!-- Disputed -->
+  <g transform="translate(260,100)">
+    <rect x="0" y="0" width="140" height="50" rx="10" fill="#0b1220" stroke="#fbbf24" stroke-width="2"/>
+    <text x="70" y="22" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#fcd34d" text-anchor="middle">DISPUTED</text>
+    <text x="70" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#fbbf24" text-anchor="middle">status: opened</text>
+  </g>
+
+  <!-- Arrow to choice -->
+  <line x1="400" y1="125" x2="440" y2="125" stroke="#fbbf24" stroke-width="1.5"/>
+  <polygon points="440,125 435,122 435,128" fill="#fbbf24"/>
+
+  <!-- Four paths vertically stacked -->
+  <!-- Jalur 1 -->
+  <g transform="translate(450,60)">
+    <rect x="0" y="0" width="310" height="55" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+    <text x="15" y="18" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#86efac">JALUR 1</text>
+    <text x="15" y="32" font-family="Segoe UI, sans-serif" font-size="9" fill="#4ade80">Penyesuaian Harga</text>
+    <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="8" fill="#64748b">Buyer input harga baru → Kopdes setuju → PO completed</text>
+    <text x="290" y="32" font-family="Segoe UI, sans-serif" font-size="9" font-weight="700" fill="#22c55e" text-anchor="end">MVP ✓</text>
+    <line x1="15" y1="20" x2="75" y2="20" stroke="#22c55e" stroke-width="1.5"/>
+  </g>
+
+  <!-- Arrow 1 -->
+  <line x1="445" y1="87" x2="450" y2="87" stroke="#22c55e" stroke-width="1.5"/>
+
+  <!-- Jalur 2 -->
+  <g transform="translate(450,130)">
+    <rect x="0" y="0" width="310" height="55" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <text x="15" y="18" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#94a3b8">JALUR 2</text>
+    <text x="15" y="32" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">Regrading dan cari buyer lain</text>
+    <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="8" fill="#475569">Barang kembali ke gudang → re-list stok ke buyer lain</text>
+    <text x="290" y="32" font-family="Segoe UI, sans-serif" font-size="9" fill="#475569" text-anchor="end">Roadmap</text>
+  </g>
+
+  <!-- Jalur 3 -->
+  <g transform="translate(450,200)">
+    <rect x="0" y="0" width="310" height="55" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <text x="15" y="18" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#94a3b8">JALUR 3</text>
+    <text x="15" y="32" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">Return penuh + refund escrow</text>
+    <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="8" fill="#475569">Barang dikembalikan → PO cancelled → buyer refund</text>
+    <text x="290" y="32" font-family="Segoe UI, sans-serif" font-size="9" fill="#475569" text-anchor="end">Roadmap</text>
+  </g>
+
+  <!-- Jalur 4 -->
+  <g transform="translate(450,270)">
+    <rect x="0" y="0" width="310" height="55" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <text x="15" y="18" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#94a3b8">JALUR 4</text>
+    <text x="15" y="32" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">Arbitrase admin TemuNiaga</text>
+    <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="8" fill="#475569">Mediator manusia → putusan final → tercatat di sistem</text>
+    <text x="290" y="32" font-family="Segoe UI, sans-serif" font-size="9" fill="#475569" text-anchor="end">Roadmap</text>
+  </g>
+
+  <!-- KOMPONEN BERSAMA -->
+  <text x="40" y="190" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Komponen semua jalur:</text>
+
+  <g transform="translate(40,210)">
+    <rect x="0" y="0" width="280" height="80" rx="10" fill="#0b1220" stroke="#1e293b" stroke-width="1"/>
+    <text x="16" y="22" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">• Semua tercatat di ledger transparan</text>
+    <text x="16" y="38" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">• Status dispute: opened → negotiating → resolved</text>
+    <text x="16" y="54" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">• Data: dispute_id, po_id, reason, suggested_price</text>
+    <text x="16" y="70" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">• Escrow ditahan sampai dispute resolved</text>
+  </g>
+
+  <!-- Impact note -->
+  <g transform="translate(40,310)">
+    <rect x="0" y="0" width="380" height="50" rx="10" fill="#7f1d1a" stroke="#ef4444" stroke-width="1"/>
+    <text x="12" y="20" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#fca5a5">Dampak finansial ke Kopdes:</text>
+    <text x="12" y="36" font-family="Segoe UI, sans-serif" font-size="9" fill="#f87171">Jalur 1: margin turun. Jalur 2-3: rugi logistik bolak-balik. Jalur 4: biaya arbitrase.</text>
+  </g>
+
+  <text x="40" y="385" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">Semua jalur terintegrasi dengan state machine PO (lihat po-state-machine.svg). Detail di ENHANCED_ALUR.md.</text>
+</svg>

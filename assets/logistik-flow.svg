@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" role="img" aria-label="Logistik dan pengiriman flow">
+  <rect width="800" height="360" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Logistik dan Pengiriman dari Kopdes ke Buyer</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Setelah PO confirmed, Kopdes mengatur pengiriman. Tiga opsi, MVP pakai opsi 1 (Kopdes antar).</text>
+
+  <!-- PO confirmed box -->
+  <g transform="translate(40,100)">
+    <rect x="0" y="0" width="140" height="50" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2"/>
+    <text x="70" y="22" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#dbeafe" text-anchor="middle">PO CONFIRMED</text>
+    <text x="70" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#93c5fd" text-anchor="middle">by buyer</text>
+  </g>
+
+  <!-- Arrow to packaging -->
+  <line x1="180" y1="125" x2="240" y2="125" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="240,125 235,122 235,128" fill="#475569"/>
+
+  <!-- Packaging -->
+  <g transform="translate(245,100)">
+    <rect x="0" y="0" width="120" height="50" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <text x="60" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#cbd5e1" text-anchor="middle">PACKAGING</text>
+    <text x="60" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">kopdes siapkan</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="365" y1="125" x2="425" y2="125" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="425,125 420,122 420,128" fill="#475569"/>
+
+  <!-- Choice node -->
+  <g transform="translate(430,90)">
+    <rect x="0" y="0" width="160" height="70" rx="10" fill="#78350f" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="80" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#fde68a" text-anchor="middle">PILIH OPSI KIRIM</text>
+    <text x="80" y="40" font-family="Segoe UI, sans-serif" font-size="9" fill="#fcd34d" text-anchor="middle">Kopdes tentukan</text>
+    <text x="80" y="55" font-family="Segoe UI, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">pengiriman</text>
+  </g>
+
+  <!-- Branch 1: Kopdes antar -->
+  <g transform="translate(620,60)">
+    <rect x="0" y="0" width="140" height="60" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+    <text x="70" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#86efac" text-anchor="middle">KOPDES ANTAR</text>
+    <text x="70" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#4ade80" text-anchor="middle">atur tanggal</text>
+    <text x="70" y="52" font-family="Segoe UI, sans-serif" font-size="9" fill="#4ade80" text-anchor="middle">+ nama driver</text>
+  </g>
+
+  <!-- Branch 2: Ekspedisi -->
+  <g transform="translate(620,150)">
+    <rect x="0" y="0" width="140" height="55" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="70" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#94a3b8" text-anchor="middle">EKSPEDISI</text>
+    <text x="70" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">input nomor resi</text>
+    <text x="70" y="50" font-family="Segoe UI, sans-serif" font-size="8" fill="#475569" text-anchor="middle">roadmap</text>
+  </g>
+
+  <!-- Branch 3: Buyer jemput -->
+  <g transform="translate(620,230)">
+    <rect x="0" y="0" width="140" height="45" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="70" y="22" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#94a3b8" text-anchor="middle">BUYER JEMPUT</text>
+    <text x="70" y="36" font-family="Segoe UI, sans-serif" font-size="8" fill="#475569" text-anchor="middle">roadmap</text>
+  </g>
+
+  <!-- Arrows from choice -->
+  <line x1="590" y1="100" x2="620" y2="90" stroke="#22c55e" stroke-width="2"/>
+  <line x1="590" y1="130" x2="620" y2="175" stroke="#475569" stroke-width="1"/>
+  <line x1="590" y1="140" x2="620" y2="250" stroke="#475569" stroke-width="1"/>
+
+  <!-- Arrow to shipped -->
+  <line x1="620" y1="90" x2="620" y2="125" stroke="#22c55e" stroke-width="1.5"/>
+  <line x1="620" y1="175" x2="620" y2="215" stroke="#475569"/>
+
+  <!-- Shipped box -->
+  <g transform="translate(80,210)">
+    <rect x="0" y="0" width="160" height="55" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2"/>
+    <text x="80" y="22" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#dbeafe" text-anchor="middle">SHIPPED</text>
+    <text x="80" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#93c5fd" text-anchor="middle">barang dalam perjalanan</text>
+    <text x="80" y="50" font-family="Segoe UI, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">status tracker buyer</text>
+  </g>
+
+  <!-- Arrow back to buyer -->
+  <line x1="240" y1="237" x2="330" y2="237" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="330,237 325,234 325,240" fill="#475569"/>
+
+  <!-- Buyer receive -->
+  <g transform="translate(335,210)">
+    <rect x="0" y="0" width="160" height="55" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+    <text x="80" y="22" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#bbf7d0" text-anchor="middle">BARANG DITERIMA</text>
+    <text x="80" y="38" font-family="Segoe UI, sans-serif" font-size="9" fill="#86efac" text-anchor="middle">buyer klik TERIMA</text>
+    <text x="80" y="50" font-family="Segoe UI, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">→ lanjut QC / completed</text>
+  </g>
+
+  <!-- Lane arrows -->
+  <path d="M 80 180 Q 40 200 80 210" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Right side note -->
+  <g transform="translate(620,295)" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">
+    <text x="0" y="0" font-weight="600" fill="#22c55e">MVP: opsi Kopdes antar saja.</text>
+    <text x="0" y="16">Ekspedisi dan buyer jemput = roadmap.</text>
+  </g>
+
+  <text x="40" y="340" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">Status tracker sederhana: packaging → ready → in_transit → delivered. Tidak perlu GPS tracking untuk MVP.</text>
+</svg>

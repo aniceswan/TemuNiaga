@@ -57,7 +57,7 @@
     <g transform="translate(80, 55)" filter="url(#shadow)">
       <rect x="0" y="0" width="300" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
       <circle cx="18" cy="18" r="6" fill="#10b981" />
-      <text x="34" y="23" fill="#38bdf8" font-size="14" font-weight="700" letter-spacing="1">HACKATHON DCE 2026 : PILAR 3</text>
+      <text x="34" y="23" fill="#38bdf8" font-size="14" font-weight="700" letter-spacing="1">HACKATHON DCE 2026 : TEMA 2</text>
     </g>
 
     <text x="80" y="155" fill="#ffffff" font-size="64" font-weight="800" letter-spacing="-1" filter="url(#shadow)">TemuNiaga<tspan fill="#10b981">.</tspan></text>

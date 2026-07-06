@@ -6,7 +6,7 @@
 
   <p>
     <a href="https://hackathon.simkopdes.go.id"><img alt="Hackathon" src="https://img.shields.io/badge/Hackathon-DCE_2026-3b82f6?style=for-the-badge&labelColor=0f172a"/></a>
-    <img alt="Kategori" src="https://img.shields.io/badge/Pilar_3-Potensi_Ekonomi_Desa-22c55e?style=for-the-badge&labelColor=052e16"/>
+    <img alt="Kategori" src="https://img.shields.io/badge/Tema_2-Optimalisasi_Potensi_Desa-22c55e?style=for-the-badge&labelColor=052e16"/>
     <img alt="Penyelenggara" src="https://img.shields.io/badge/Penyelenggara-Kemenkop_x_PEBS_FEB_UI-fbbf24?style=for-the-badge&labelColor=78350f"/>
   </p>
   <p>
@@ -446,6 +446,7 @@ graph TB
 - **Multi-Tenant Database**: Skema PostgreSQL didesain mendukung agregasi dan pooling stok antar-koperasi secara nasional.
 - **Resilience via Caching**: Menggunakan Redis Cache untuk menyimpan data BPS/Bapanas, memastikan aplikasi tetap beroperasi lancar meskipun API pemerintah mengalami downtime atau pemeliharaan.
 - **Asynchronous Message Queue**: Tugas berat seperti pengiriman notifikasi WhatsApp massal dan sinkronisasi data harga dijalankan di latar belakang melalui antrean pesan (message queue).
+- **State Machine Transaksi B2B**: Alur PO digital dari draft → confirmed → shipped → delivered → completed, dengan dispute handling. Lihat `ENHANCED_ALUR.md` untuk blueprint lengkap.
 
 ---
 
@@ -481,7 +482,7 @@ flowchart TB
         direction TB
         SIMKOPDES["SIMKOPDES (Kementerian Koperasi RI)"]
         VENDOR["Software Pembukuan Internal"]
-        TEMUNIAGA["TEMUNIAGA (Pilar 3: Mesin Ekonomi)"]
+        TEMUNIAGA["TEMUNIAGA (Tema 2: Mesin Ekonomi)"]
         
         SIMKOPDES --- VENDOR --- TEMUNIAGA
     end
@@ -712,7 +713,7 @@ TemuNiaga bukan aplikasi terpisah. Ia adalah **fondasi data transaksi dan keangg
 - TemuNiaga dirancang untuk **memutus pola lama**: ledger transparan (bukan RAT formalitas), SHU pro-rata (bukan ditahan), AI grounded data (bukan mengira-ngira), model bisnis mandiri (bukan subsidi)
 
 <div align="center">
-  <p><sub><strong>TemuNiaga</strong> • Disiapkan untuk Hackathon Digital Cooperatives Expo 2026 · Pilar 3</sub><br/>
+  <p><sub><strong>TemuNiaga</strong> • Disiapkan untuk Hackathon Digital Cooperatives Expo 2026 · Tema 2</sub><br/>
   <sub>Kementerian Koperasi RI × PEBS FEB Universitas Indonesia</sub><br/>
   <sub><em>Temu penjual & pembeli · Niaga desa ke pasar nasional</em></sub></p>
 </div>
