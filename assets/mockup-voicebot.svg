@@ -13,7 +13,7 @@
 
   <rect width="800" height="480" fill="#020617"/>
   <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">Mockup: Voice Bot untuk Petani Sangat Kuno</text>
-  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#94a3b8">Tak perlu baca, tak perlu tekan tombol. Cukup bicara — AI jawab berdasar data, nol halusinasi.</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#94a3b8">Tak perlu baca, tak perlu tekan tombol. Cukup bicara - AI jawab berdasar data, nol halusinasi.</text>
 
   <!-- phone frame -->
   <g transform="translate(260,90)">
@@ -104,11 +104,11 @@
   <g transform="translate(40,180)" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">
     <text x="0" y="0" font-weight="600" fill="#22c55e">Alur:</text>
     <text x="0" y="20">1. Petani bicara (bahasa apa)</text>
-    <text x="0" y="38">2. STT: speech → teks</text>
+    <text x="0" y="38">2. STT: speech > teks</text>
     <text x="0" y="56">3. Intent: "cek harga"</text>
     <text x="0" y="74">4. RAG: query DB harga</text>
     <text x="0" y="92">5. LLM: format jawaban</text>
-    <text x="0" y="110">6. TTS: teks → suara</text>
+    <text x="0" y="110">6. TTS: teks > suara</text>
     <text x="0" y="128">7. Petani dengar harga</text>
   </g>
 
@@ -116,10 +116,10 @@
     <text x="0" y="0" font-weight="600" fill="#fbbf24">Anti-halusinasi:</text>
     <text x="0" y="20">Scope = hanya data sendiri</text>
     <text x="0" y="38">(ledger, harga, status)</text>
-    <text x="0" y="56">Di luar scope → "saya tidak</text>
+    <text x="0" y="56">Di luar scope > "saya tidak</text>
     <text x="0" y="74">tahu, hubungi operator"</text>
     <text x="0" y="100" font-weight="600" fill="#3b82f6">Otomasi tiket:</text>
     <text x="0" y="118">~70-80% repetitif</text>
-    <text x="0" y="136">→ jawab otomatis</text>
+    <text x="0" y="136">> jawab otomatis</text>
   </g>
 </svg>

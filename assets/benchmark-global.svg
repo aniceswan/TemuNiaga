@@ -2,7 +2,7 @@
   <rect width="900" height="380" fill="#020617"/>
 
   <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Benchmark: Koperasi Bisa Jadi Raksasa Kelas Dunia</text>
-  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Model patungan rakyat bisa berskala besar — dengan sistem dan teknologi yang tepat.</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Model patungan rakyat bisa berskala besar - dengan sistem dan teknologi yang tepat.</text>
 
   <!-- Amul -->
   <g transform="translate(40,96)">
@@ -55,5 +55,5 @@
     <text x="20" y="246" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">industri &amp; ritel modern</text>
   </g>
 
-  <text x="40" y="368" font-family="Segoe UI, sans-serif" font-size="12" fill="#fbbf24" font-style="italic">"Amul dulu mengorganisir peternak kecil yang tak punya posisi tawar — persis 83.000 KDKMP kita hari ini. Bedanya: mereka punya sistem." — Mentor</text>
+  <text x="40" y="368" font-family="Segoe UI, sans-serif" font-size="12" fill="#fbbf24" font-style="italic">"Amul dulu mengorganisir peternak kecil yang tak punya posisi tawar - persis 83.000 KDKMP kita hari ini. Bedanya: mereka punya sistem." - Mentor</text>
 </svg>
