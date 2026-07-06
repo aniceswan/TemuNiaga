@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" role="img" aria-label="Risk matrix R1-R12">
+  <rect width="800" height="460" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Matriks Risiko: Probabilitas vs Dampak per Kopdes</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Dampak (sumbu X, kiri ke kanan) vs Probabilitas (sumbu Y, bawah ke atas). Expected loss per tahun: ~Rp 80-120 jt.</text>
+
+  <!-- Matrix grid -->
+  <g transform="translate(40,100)">
+    <!-- Grid -->
+    <g stroke="#1e293b" stroke-width="0.5">
+      <line x1="0" y1="300" x2="720" y2="300"/>
+      <line x1="0" y1="200" x2="720" y2="200"/>
+      <line x1="0" y1="100" x2="720" y2="100"/>
+      <line x1="0" y1="0" x2="720" y2="0"/>
+      <line x1="240" y1="0" x2="240" y2="300"/>
+      <line x1="480" y1="0" x2="480" y2="300"/>
+    </g>
+
+    <!-- Axis labels -->
+  <text x="360" y="330" font-family="Segoe UI, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Probabilitas</text>
+  <text x="370" y="330" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">atas-bawah = tinggi-rendah</text>
+
+    <!-- Column headers -->
+    <g font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">
+      <text x="120" y="316">Rendah (&lt; Rp 100 jt)</text>
+      <text x="360" y="316">Sedang (Rp 100-300 jt)</text>
+      <text x="600" y="316">Tinggi (&gt; Rp 300 jt)</text>
+    </g>
+
+    <!-- Row labels -->
+    <g font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">
+      <text x="252" y="55" text-anchor="end">Tinggi (&gt; 30%)</text>
+      <text x="252" y="152" text-anchor="end">Sedang (15-30%)</text>
+      <text x="252" y="255" text-anchor="end">Rendah (&lt; 15%)</text>
+    </g>
+
+    <!-- Green zone (low risk) -->
+    <rect x="0" y="0" width="240" height="100" fill="#052e16" opacity="0.3"/>
+    <rect x="0" y="100" width="240" height="100" fill="#052e16" opacity="0.15"/>
+
+    <!-- Yellow zone (medium risk) -->
+    <rect x="240" y="0" width="240" height="100" fill="#78350f" opacity="0.25"/>
+    <rect x="240" y="100" width="240" height="100" fill="#78350f" opacity="0.15"/>
+    <rect x="0" y="200" width="240" height="100" fill="#78350f" opacity="0.15"/>
+
+    <!-- Red zone -->
+    <rect x="480" y="0" width="240" height="100" fill="#7f1d1a" opacity="0.25"/>
+    <rect x="480" y="100" width="240" height="100" fill="#7f1d1a" opacity="0.15"/>
+
+    <!-- Plot risks as circles -->
+    <!-- R1: Side-selling, prob=40%, impact=sedang(-Rp253jt) -->
+    <circle cx="360" cy="40" r="5" fill="#ef4444"/>
+    <text x="372" y="43" font-family="Segoe UI, sans-serif" font-size="8" fill="#fca5a5">R1 side-sell</text>
+
+    <!-- R6: Literasi rendah, prob=60%, impact=rendah(sedang) -->
+    <circle cx="180" cy="25" r="5" fill="#fbbf24"/>
+    <text x="192" y="28" font-family="Segoe UI, sans-serif" font-size="8" fill="#fcd34d">R6 literasi</text>
+
+    <!-- R7: Infrastruktur -->
+    <circle cx="120" cy="50" r="5" fill="#fbbf24"/>
+    <text x="132" y="53" font-family="Segoe UI, sans-serif" font-size="8" fill="#fcd34d">R7 infra</text>
+
+    <!-- R3: Gagal MOQ, prob=30%, impact=sedang(Rp100-200jt) -->
+    <circle cx="360" cy="90" r="5" fill="#fbbf24"/>
+    <text x="372" y="93" font-family="Segoe UI, sans-serif" font-size="8" fill="#fcd34d">R3 MOQ</text>
+
+    <!-- R10: Cashflow, prob=25%, impact=sedang -->
+    <circle cx="300" cy="120" r="5" fill="#fbbf24"/>
+    <text x="312" y="123" font-family="Segoe UI, sans-serif" font-size="8" fill="#fcd34d">R10 cashflow</text>
+
+    <!-- R2: Grading, prob=25%, impact=rendah(Rp50-100jt) -->
+    <circle cx="120" cy="140" r="4" fill="#22c55e"/>
+    <text x="132" y="143" font-family="Segoe UI, sans-serif" font-size="8" fill="#86efac">R2 grading</text>
+
+    <!-- R8: Fraud, prob=20%, impact=sedang -->
+    <circle cx="280" cy="165" r="4" fill="#22c55e"/>
+    <text x="292" y="168" font-family="Segoe UI, sans-serif" font-size="8" fill="#86efac">R8 fraud</text>
+
+    <!-- R4: Harga jatuh, prob=20%, impact=sedang -->
+    <circle cx="360" cy="180" r="4" fill="#22c55e"/>
+    <text x="372" y="183" font-family="Segoe UI, sans-serif" font-size="8" fill="#86efac">R4 harga</text>
+
+    <!-- R5: Data basi, prob=15%, impact=rendah -->
+    <circle cx="80" cy="210" r="3" fill="#22c55e"/>
+    <text x="92" y="213" font-family="Segoe UI, sans-serif" font-size="7" fill="#86efac">R5 data</text>
+
+    <!-- R9: Susut, prob=15%, impact=sedang -->
+    <circle cx="300" cy="210" r="3" fill="#22c55e"/>
+    <text x="312" y="213" font-family="Segoe UI, sans-serif" font-size="7" fill="#86efac">R9 susut</text>
+
+    <!-- R12: API down, prob=10%, impact=rendah -->
+    <circle cx="80" cy="270" r="3" fill="#22c55e"/>
+    <text x="92" y="273" font-family="Segoe UI, sans-serif" font-size="7" fill="#86efac">R12 API</text>
+
+    <!-- R11: Wanprestasi, prob=10%, impact=tinggi -->
+    <circle cx="560" cy="270" r="4" fill="#fbbf24"/>
+    <text x="572" y="273" font-family="Segoe UI, sans-serif" font-size="8" fill="#fcd34d">R11 wanprestasi</text>
+
+    <!-- Legend -->
+    <g transform="translate(20,310)" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">
+      <circle cx="6" cy="-2" r="4" fill="#22c55e"/>
+      <text x="16" y="0">Mitigasi kuat, residual risk rendah</text>
+      <circle cx="6" cy="14" r="4" fill="#fbbf24"/>
+      <text x="16" y="16">Mitigasi parsial, residual risk sedang</text>
+      <circle cx="6" cy="30" r="4" fill="#ef4444"/>
+      <text x="16" y="32">Mitigasi perlu penguatan</text>
+    </g>
+
+    <!-- Expected loss calc -->
+    <g transform="translate(480,310)">
+      <rect x="0" y="0" width="220" height="40" rx="8" fill="#0b1220" stroke="#1e293b"/>
+      <text x="110" y="16" font-family="Segoe UI, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Expected loss per tahun</text>
+      <text x="110" y="32" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#fbbf24" text-anchor="middle">Rp 80 - 120 jt/Kopdes</text>
+    </g>
+  </g>
+</svg>

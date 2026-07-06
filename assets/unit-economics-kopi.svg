@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" role="img" aria-label="Aliran uang per transaksi kopi">
+  <defs>
+    <linearGradient id="ue_farmer" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#15803d"/></linearGradient>
+    <linearGradient id="ue_log" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#64748b"/><stop offset="1" stop-color="#475569"/></linearGradient>
+    <linearGradient id="ue_fee" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+    <linearGradient id="ue_kopdes" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient>
+    <linearGradient id="ue_shu" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+
+  <rect width="900" height="520" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Aliran Uang per Transaksi Kopi (per kg)</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Dari Rp18.000/kg yang dibayar pembeli, ke mana uangnya mengalir? Semua angka dalam rupiah per kilogram.</text>
+
+  <!-- DEAL VALUE -->
+  <g transform="translate(330,100)">
+    <rect x="0" y="0" width="240" height="48" rx="12" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+    <text x="120" y="22" font-family="Segoe UI, sans-serif" font-size="11" fill="#fcd34d" text-anchor="middle">PEMBELI BESAR BAYAR</text>
+    <text x="120" y="40" font-family="Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#fbbf24" text-anchor="middle">Rp 18.000 / kg</text>
+  </g>
+
+  <!-- Vertical split lines -->
+  <line x1="450" y1="148" x2="450" y2="170" stroke="#475569" stroke-width="1.5"/>
+  <line x1="450" y1="170" x2="200" y2="170" stroke="#475569" stroke-width="1"/>
+  <line x1="450" y1="170" x2="450" y2="170" stroke="#475569" stroke-width="1"/>
+  <line x1="450" y1="170" x2="700" y2="170" stroke="#475569" stroke-width="1"/>
+  <line x1="200" y1="170" x2="200" y2="186" stroke="#475569" stroke-width="1.5"/>
+  <line x1="450" y1="170" x2="450" y2="186" stroke="#475569" stroke-width="1.5"/>
+  <line x1="700" y1="170" x2="700" y2="186" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- FARMER -->
+  <g transform="translate(40,188)">
+    <rect x="0" y="0" width="320" height="70" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="160" y="24" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#86efac" text-anchor="middle">DIBAYAR KE PETANI</text>
+    <text x="160" y="44" font-family="Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#22c55e" text-anchor="middle">Rp 6.900 (38%)</text>
+    <text x="160" y="62" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">sebelumnya Rp6.000 dari tengkulak · naik +15%</text>
+  </g>
+
+  <!-- LOGISTICS -->
+  <g transform="translate(370,188)">
+    <rect x="0" y="0" width="160" height="70" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <text x="80" y="24" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#94a3b8" text-anchor="middle">LOGISTIK</text>
+    <text x="80" y="44" font-family="Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#cbd5e1" text-anchor="middle">Rp 4.000</text>
+    <text x="80" y="62" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">22% · transport, sortir, gudang</text>
+  </g>
+
+  <!-- FEE -->
+  <g transform="translate(540,188)">
+    <rect x="0" y="0" width="130" height="70" rx="10" fill="#1e1b4b" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="65" y="24" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#c4b5fd" text-anchor="middle">FEE TEMUNIAGA</text>
+    <text x="65" y="44" font-family="Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#a78bfa" text-anchor="middle">Rp 360</text>
+    <text x="65" y="62" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">2%</text>
+  </g>
+
+  <line x1="200" y1="260" x2="200" y2="310" stroke="#475569" stroke-width="1"/>
+  <line x1="425" y1="260" x2="425" y2="286" stroke="#475569" stroke-width="1"/>
+
+  <!-- KOPDES MARGIN -->
+  <g transform="translate(40,310)">
+    <rect x="0" y="0" width="640" height="58" rx="10" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="320" y="22" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#93c5fd" text-anchor="middle">MARGIN KOPERASI DESA</text>
+    <text x="320" y="48" font-family="Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#3b82f6" text-anchor="middle">Rp 6.740 (38%) = 18.000 - 6.900 - 4.000 - 360</text>
+  </g>
+
+  <!-- Splits from Kopdes margin -->
+  <line x1="320" y1="370" x2="320" y2="386" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- BUNGA + OPEX -->
+  <g transform="translate(40,388)">
+    <rect x="0" y="0" width="190" height="50" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="1"/>
+    <text x="95" y="20" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#fca5a5" text-anchor="middle">BUNGA + OPEX</text>
+    <text x="95" y="40" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#ef4444" text-anchor="middle">Rp 3.750</text>
+  </g>
+
+  <!-- SHU -->
+  <g transform="translate(250,388)">
+    <rect x="0" y="0" width="190" height="50" rx="8" fill="#78350f" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="95" y="20" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#fcd34d" text-anchor="middle">SHU KE PETANI</text>
+    <text x="95" y="40" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">Rp 2.990</text>
+  </g>
+
+  <!-- SHU back to farmer arrow -->
+  <path d="M 345 388 Q 380 365 380 300 L 380 258" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrShu)"/>
+  <defs>
+    <marker id="arrShu" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M10 5 L0 0 L0 10 Z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrNote" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M10 5 L0 0 L0 10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- RESERVE -->
+  <g transform="translate(490,388)">
+    <rect x="0" y="0" width="190" height="50" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="95" y="20" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">CADANGAN KOPDES</text>
+    <text x="95" y="40" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1" text-anchor="middle">Rp 0 (tutup di margin)</text>
+  </g>
+
+  <!-- RIGHT SIDE: Farmer benefit summary -->
+  <g transform="translate(700,100)">
+    <rect x="0" y="0" width="170" height="210" rx="12" fill="#0b1220" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="85" y="28" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#86efac" text-anchor="middle">YANG DITERIMA PETANI</text>
+    <line x1="16" y1="42" x2="154" y2="42" stroke="#1e293b"/>
+
+    <text x="85" y="68" font-family="Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#fbbf24" text-anchor="middle">Rp 9.890/kg</text>
+    <text x="85" y="86" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">farmgate Rp6.900 + SHU Rp2.990</text>
+
+    <line x1="16" y1="100" x2="154" y2="100" stroke="#1e293b"/>
+    <text x="16" y="118" font-family="Segoe UI, sans-serif" font-size="10" fill="#94a3b8">Sebelumnya dari tengkulak:</text>
+    <text x="154" y="118" font-family="Segoe UI, sans-serif" font-size="10" fill="#ef4444" text-anchor="end">Rp 6.000/kg</text>
+    <text x="16" y="138" font-family="Segoe UI, sans-serif" font-size="10" fill="#94a3b8">Kenaikan total:</text>
+    <text x="154" y="138" font-family="Segoe UI, sans-serif" font-size="10" fill="#22c55e" text-anchor="end" font-weight="700">+65%</text>
+
+    <line x1="16" y1="152" x2="154" y2="152" stroke="#1e293b"/>
+    <text x="16" y="172" font-family="Segoe UI, sans-serif" font-size="10" fill="#94a3b8">Petani (100 org) × 800 kg:</text>
+    <text x="154" y="172" font-family="Segoe UI, sans-serif" font-size="10" fill="#fbbf24" text-anchor="end" font-weight="700">Rp 3.112.000/th</text>
+    <text x="16" y="192" font-family="Segoe UI, sans-serif" font-size="10" fill="#94a3b8">Kopdes margin utuh (80 ton):</text>
+    <text x="154" y="192" font-family="Segoe UI, sans-serif" font-size="10" fill="#3b82f6" text-anchor="end" font-weight="700">Rp 539 jt/th</text>
+  </g>
+
+  <text x="40" y="468" font-family="Segoe UI, sans-serif" font-size="11" fill="#64748b">Angka per kg dari asumsi: 100 petani × 800 kg/th = 80 ton, buyer Rp18.000/kg, farmgate Rp6.900, logistik Rp4.000, fee 2%.</text>
+  <text x="40" y="488" font-family="Segoe UI, sans-serif" font-size="11" fill="#64748b">Kenaikan total petani +65% = selisih harga beli (+15%) + SHU pro-rata. Lihat ROI_ANALYSIS.md §III.A untuk derivasi lengkap.</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-label="Sensitivitas tornado">
+  <rect width="800" height="400" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Sensitivitas: Dampak Per Variabel pada Margin Kopdes</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Berapa perubahan margin Kopdes (baseline Rp 844 jt) jika satu variabel berubah? Diurut dari paling sensitif.</text>
+
+  <!-- Center line (baseline) -->
+  <line x1="440" y1="100" x2="440" y2="360" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="440" y="95" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">baseline Rp 844 jt</text>
+
+  <!-- Volume panen ±20% -->
+  <text x="50" y="120" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Volume panen (±20%)</text>
+  <rect x="48" y="108" width="196" height="18" rx="4" fill="#7f1d1a"/>
+  <text x="54" y="121" font-family="Segoe UI, sans-serif" font-size="9" fill="#fca5a5">-Rp 169 jt</text>
+  <rect x="440" y="108" width="196" height="18" rx="4" fill="#052e16"/>
+  <text x="582" y="121" font-family="Segoe UI, sans-serif" font-size="9" fill="#86efac">+Rp 169 jt</text>
+  <text x="650" y="121" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">paling sensitif</text>
+
+  <!-- Harga komoditas ±10% -->
+  <text x="50" y="156" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Harga kopi (±10%)</text>
+  <rect x="80" y="144" width="164" height="18" rx="4" fill="#7f1d1a"/>
+  <text x="86" y="157" font-family="Segoe UI, sans-serif" font-size="9" fill="#fca5a5">-Rp 72 jt</text>
+  <rect x="440" y="144" width="164" height="18" rx="4" fill="#052e16"/>
+  <text x="548" y="157" font-family="Segoe UI, sans-serif" font-size="9" fill="#86efac">+Rp 72 jt</text>
+
+  <!-- Biaya logistik ±15% -->
+  <text x="50" y="192" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0" text-anchor="start">Biaya logistik (+15%)</text>
+  <rect x="112" y="180" width="132" height="18" rx="4" fill="#7f1d1a"/>
+  <text x="118" y="193" font-family="Segoe UI, sans-serif" font-size="9" fill="#fca5a5">-Rp 87 jt</text>
+  <text x="252" y="193" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">one-sided</text>
+
+  <!-- Bunga ±2% -->
+  <text x="50" y="228" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0" text-anchor="start">Bunga pinjaman (+2%)</text>
+  <rect x="139" y="216" width="105" height="18" rx="4" fill="#7f1d1a"/>
+  <text x="145" y="229" font-family="Segoe UI, sans-serif" font-size="9" fill="#fca5a5">-Rp 60 jt</text>
+  <text x="252" y="229" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">one-sided</text>
+
+  <!-- Fee ±1% -->
+  <text x="50" y="264" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0" text-anchor="start">Fee TemuNiaga (±1%)</text>
+  <rect x="172" y="252" width="72" height="18" rx="4" fill="#7f1d1a"/>
+  <text x="178" y="265" font-family="Segoe UI, sans-serif" font-size="9" fill="#fca5a5">-Rp 27 jt</text>
+  <rect x="440" y="252" width="72" height="18" rx="4" fill="#052e16"/>
+  <text x="460" y="265" font-family="Segoe UI, sans-serif" font-size="9" fill="#86efac">+Rp 27 jt</text>
+  <text x="518" y="265" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b">paling tidak sensitif</text>
+
+  <!-- Skenario boxes -->
+  <g transform="translate(440,300)">
+    <text x="0" y="0" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#f8fafc">Margin di berbagai skenario:</text>
+    
+    <rect x="0" y="14" width="140" height="52" rx="8" fill="#052e16" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="70" y="37" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#86efac" text-anchor="middle">OPTIMIS</text>
+    <text x="70" y="55" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" fill="#22c55e" text-anchor="middle">Rp 1,01 M</text>
+
+    <rect x="155" y="14" width="140" height="52" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="225" y="37" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#fcd34d" text-anchor="middle">MODERAT</text>
+    <text x="225" y="55" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" fill="#fbbf24" text-anchor="middle">Rp 844 jt</text>
+
+    <rect x="310" y="14" width="140" height="52" rx="8" fill="#7f1d1a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="380" y="37" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#fca5a5" text-anchor="middle">PESIMIS</text>
+    <text x="380" y="55" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" fill="#ef4444" text-anchor="middle">Rp 380 jt</text>
+  </g>
+</svg>

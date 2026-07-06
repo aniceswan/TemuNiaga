@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" role="img" aria-label="Farmer's share comparison">
+  <rect width="800" height="380" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Farmer's Share: Perbandingan 4 Komoditas</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Berapa persen dari harga akhir yang diterima petani? Makin rendah, makin besar ruang perbaikan.</text>
+
+  <!-- KOPI bar -->
+  <text x="40" y="110" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Kopi (Solok, Sumbar)</text>
+  <rect x="40" y="118" width="230" height="28" rx="6" fill="#7f1d1a" stroke="#ef4444"/>
+  <text x="280" y="138" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800" fill="#ef4444">32%</text>
+  <rect x="330" y="118" width="100" height="28" rx="6" fill="#052e16" stroke="#22c55e"/>
+  <text x="380" y="138" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#86efac" text-anchor="middle">Target +15%</text>
+  <text x="460" y="138" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">margin Rp12.000/kg · 7-9 lapis · hero pitch</text>
+
+  <!-- TEMBAKAU bar -->
+  <text x="40" y="168" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Tembakau (Sumenep, Madura)</text>
+  <rect x="40" y="176" width="568" height="28" rx="6" fill="#78350f" stroke="#fbbf24"/>
+  <text x="280" y="196" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800" fill="#fbbf24">75,8%</text>
+  <rect x="618" y="176" width="100" height="28" rx="6" fill="#052e16" stroke="#22c55e"/>
+  <text x="668" y="196" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#86efac" text-anchor="middle">Target +8%</text>
+  <text x="740" y="196" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">fluktuasi</text>
+
+  <!-- PADI bar-1 -->
+  <text x="40" y="226" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Padi saluran I (Bangkalan)</text>
+  <rect x="40" y="234" width="720" height="28" rx="6" fill="#1e3a8a" stroke="#3b82f6"/>
+  <text x="280" y="254" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800" fill="#3b82f6">96%</text>
+  <text x="460" y="254" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">langsung ke industri via tengkulak · margin Rp250/kg</text>
+
+  <!-- PADI bar-2 -->
+  <text x="40" y="284" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Padi saluran II (Bangkalan)</text>
+  <rect x="40" y="292" width="450" height="28" rx="6" fill="#1e293b" stroke="#ef4444"/>
+  <text x="280" y="312" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800" fill="#ef4444">60%</text>
+  <text x="460" y="312" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">lewat penggilingan · TemuNiaga bantu akses ke saluran I</text>
+
+  <!-- SINGKONG bar -->
+  <text x="40" y="342" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Singkong (nasional)</text>
+  <rect x="40" y="350" width="500" height="28" rx="6" fill="#1e293b" stroke="#64748b"/>
+  <text x="280" y="370" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800" fill="#94a3b8">~50-70%</text>
+  <text x="460" y="370" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">harga anjlok → intervensi Rp1.350/kg</text>
+</svg>

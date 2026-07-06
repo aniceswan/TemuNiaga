@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Kurva break-even">
+  <rect width="800" height="420" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Kurva Break-Even: Akumulasi Margin vs Kewajiban</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Kapan margin Kopdes menutup seluruh kewajiban (bunga + cicilan + opex)? Titik potong = bulan ke-18.</text>
+
+  <!-- Chart area -->
+  <g transform="translate(80,100)">
+    <!-- Grid -->
+    <g stroke="#1e293b" stroke-width="0.5">
+      <line x1="0" y1="280" x2="600" y2="280"/>
+      <line x1="0" y1="240" x2="600" y2="240"/>
+      <line x1="0" y1="200" x2="600" y2="200"/>
+      <line x1="0" y1="160" x2="600" y2="160"/>
+      <line x1="0" y1="120" x2="600" y2="120"/>
+      <line x1="0" y1="80" x2="600" y2="80"/>
+      <line x1="0" y1="40" x2="600" y2="40"/>
+    </g>
+
+    <!-- Y-axis labels -->
+    <g font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b" text-anchor="end">
+      <text x="-8" y="284">Rp 0</text>
+      <text x="-8" y="244">Rp 200 jt</text>
+      <text x="-8" y="204">Rp 400 jt</text>
+      <text x="-8" y="164">Rp 600 jt</text>
+      <text x="-8" y="124">Rp 800 jt</text>
+      <text x="-8" y="84">Rp 1,0 M</text>
+      <text x="-8" y="44">Rp 1,2 M</text>
+    </g>
+
+    <!-- X-axis -->
+    <line x1="0" y1="280" x2="620" y2="280" stroke="#475569" stroke-width="1"/>
+    <g font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">
+      <text x="0" y="296">0</text>
+      <text x="100" y="296">6</text>
+      <text x="200" y="296">12</text>
+      <text x="300" y="296">18</text>
+      <text x="400" y="296">24</text>
+      <text x="500" y="296">30</text>
+      <text x="600" y="296">36 bln</text>
+    </g>
+
+    <!-- Dashed vertical at month 18 -->
+    <line x1="300" y1="10" x2="300" y2="280" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+    <!-- KEWAJIBAN LINE (linear, steeper) -->
+    <polyline points="0,280 50,265 100,248 150,230 200,213 250,195 300,178 350,160 400,143 450,125 500,108 550,90 600,73"
+      fill="none" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="610" y="72" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#ef4444">Kewajiban</text>
+
+    <!-- MARGIN LINE (curved, grows then accelerates) -->
+    <!-- First year: slow ramp-up, grace period -->
+    <!-- Month 0-3: ramp-up (low margin), 3-12: growing, 12+: accelerating with scale -->
+    <polyline points="0,280 50,275 100,265 150,250 200,235 250,218 300,200 350,175 400,145 450,108 500,65 550,15 600,10"
+      fill="none" stroke="#22c55e" stroke-width="2.5"/>
+    <text x="610" y="10" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#22c55e">Margin</text>
+
+    <!-- BREAK-EVEN DOT -->
+    <circle cx="300" cy="178" r="7" fill="#fbbf24" stroke="#0f172a" stroke-width="2"/>
+    <text x="310" y="174" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#fbbf24">Break-even: bulan ke-18</text>
+
+    <!-- Grace period annotation -->
+    <rect x="0" y="285" width="200" height="2" fill="#3b82f6"/>
+    <text x="100" y="310" font-family="Segoe UI, sans-serif" font-size="10" fill="#3b82f6" text-anchor="middle">Grace period 6-8 bln (PMK 49/2025)</text>
+    <text x="100" y="324" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">hanya bayar bunga, tanpa cicilan pokok</text>
+
+    <!-- After grace annotation -->
+    <line x1="200" y1="285" x2="200" y2="280" stroke="#64748b" stroke-width="1"/>
+    <text x="350" y="310" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Mulai cicilan pokok + bunga bulan ke-9</text>
+    <text x="350" y="324" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Rp 500 jt/th pokok + Rp 180 jt/th bunga</text>
+
+    <!-- Post break-even -->
+    <text x="530" y="310" font-family="Segoe UI, sans-serif" font-size="10" fill="#22c55e" text-anchor="middle">Surplus setelah break-even</text>
+    <text x="530" y="324" font-family="Segoe UI, sans-serif" font-size="9" fill="#86efac" text-anchor="middle">margin > kewajiban, Kopdes mandiri</text>
+  </g>
+
+  <text x="40" y="408" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">Asumsi: volume 50% bln 1-6, 80% bln 7-12, 100% bln 13+. Grace period 8 bln. Cicilan pokok bln ke-9. Lihat ROI_ANALYSIS.md L.8.</text>
+</svg>

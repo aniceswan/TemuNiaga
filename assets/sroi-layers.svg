@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" role="img" aria-label="SROI 4-layer multiplier effect">
+  <defs>
+    <linearGradient id="sroi_direct" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#14532d"/></linearGradient>
+    <linearGradient id="sroi_indirect" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+    <linearGradient id="sroi_induced" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#78350f"/></linearGradient>
+    <linearGradient id="sroi_social" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#4c1d95"/></linearGradient>
+  </defs>
+
+  <rect width="900" height="460" fill="#020617"/>
+
+  <text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Social Return on Investment (SROI): 4 Lapis Dampak</text>
+  <text x="40" y="68" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8">Setiap rupiah yang berputar di koperasi memicu efek berantai di ekonomi desa. Angka per Kopdes per tahun.</text>
+
+  <!-- LAYER 1: DIRECT -->
+  <g transform="translate(40,100)">
+    <rect x="0" y="0" width="820" height="78" rx="12" fill="url(#sroi_direct)" opacity="0.15" stroke="#22c55e" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="78" rx="4" fill="#22c55e"/>
+    <text x="24" y="26" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800" fill="#86efac">1. DAMPAK LANGSUNG (Direct)</text>
+    <text x="24" y="46" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">Petani &amp; koperasi: kenaikan farmgate + SHU + lapangan kerja</text>
+    <text x="24" y="66" font-family="Segoe UI, sans-serif" font-size="11" fill="#bbf7d0">Rp 804 jt (kenaikan farmgate) + Rp 411 jt (SHU) + 3-5 lapangan kerja = <tspan font-weight="700" fill="#22c55e">Rp 1.215 jt</tspan></text>
+  </g>
+
+  <!-- LAYER 2: INDIRECT -->
+  <g transform="translate(40,190)">
+    <rect x="0" y="0" width="820" height="78" rx="12" fill="url(#sroi_indirect)" opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="78" rx="4" fill="#3b82f6"/>
+    <text x="24" y="26" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800" fill="#93c5fd">2. DAMPAK TIDAK LANGSUNG (Indirect)</text>
+    <text x="24" y="46" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">Rantai pasok lokal: supplier pupuk/karung + UMKM olahan (kopi bubuk, keripik) + transport</text>
+    <text x="24" y="66" font-family="Segoe UI, sans-serif" font-size="11" fill="#bfdbfe">Backward: Rp 225 jt (input lokal) + Forward: Rp 350 jt (nilai tambah olahan) = <tspan font-weight="700" fill="#3b82f6">Rp 575 jt</tspan></text>
+  </g>
+
+  <!-- LAYER 3: INDUCED -->
+  <g transform="translate(40,280)">
+    <rect x="0" y="0" width="820" height="78" rx="12" fill="url(#sroi_induced)" opacity="0.15" stroke="#fbbf24" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="78" rx="4" fill="#fbbf24"/>
+    <text x="24" y="26" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800" fill="#fcd34d">3. DAMPAK IKUTAN (Induced)</text>
+    <text x="24" y="46" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">Belanja gaji operator &amp; petani di warung, pasar desa, biaya sekolah. Uang berputar di desa.</text>
+    <text x="24" y="66" font-family="Segoe UI, sans-serif" font-size="11" fill="#fde68a">Belanja lokal: ~Rp 100 jt + Penghematan biaya transaksi petani: ~Rp 100 jt = <tspan font-weight="700" fill="#fbbf24">Rp 200 jt</tspan></text>
+  </g>
+
+  <!-- LAYER 4: SOCIAL -->
+  <g transform="translate(40,370)">
+    <rect x="0" y="0" width="820" height="78" rx="12" fill="url(#sroi_social)" opacity="0.15" stroke="#a78bfa" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="78" rx="4" fill="#a78bfa"/>
+    <text x="24" y="26" font-family="Segoe UI, sans-serif" font-size="15" font-weight="800" fill="#c4b5fd">4. DAMPAK SOSIAL (Social)</text>
+    <text x="24" y="46" font-family="Segoe UI, sans-serif" font-size="11" fill="#94a3b8">Penurunan ketergantungan tengkulak, literasi keuangan, partisipasi RAT, keterwakilan perempuan</text>
+    <text x="24" y="66" font-family="Segoe UI, sans-serif" font-size="11" fill="#ddd6fe">Kualitatif (tidak dimonetisasi) — diukur via baseline survey sebelum/sesudah pilot</text>
+  </g>
+
+  <!-- SROI SUMMARY BOX on right -->
+  <g transform="translate(600,185)">
+    <rect x="0" y="0" width="200" height="130" rx="12" fill="#0b1220" stroke="#fbbf24" stroke-width="2"/>
+    <text x="100" y="28" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#fde68a" text-anchor="middle">SROI RATIO</text>
+    <line x1="14" y1="40" x2="186" y2="40" stroke="#1e293b"/>
+    <text x="100" y="62" font-family="Segoe UI, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Tahun 1: 1 : 0,60</text>
+    <text x="100" y="82" font-family="Segoe UI, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Tahun 3: 1 : 1,30</text>
+    <text x="100" y="102" font-family="Segoe UI, sans-serif" font-size="12" fill="#fbbf24" text-anchor="middle">Tahun 5: 1 : 3,2 - 5,8</text>
+    <text x="100" y="120" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">monetized return only</text>
+  </g>
+</svg>

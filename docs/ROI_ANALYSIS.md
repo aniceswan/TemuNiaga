@@ -82,6 +82,8 @@ Tiga kategori sumber angka dalam dokumen ini:
 
 ## II. Diagnosis Ekonomi Per Komoditas
 
+<br/><p align="center"><img src="../assets/farmer-share-compare.svg" alt="Farmer's share comparison" width="90%"/></p><br/>
+
 ### II.A Kopi (Solok, Sumatera Barat)
 
 | Metrik | Nilai | Sumber |
@@ -134,6 +136,8 @@ Tiga kategori sumber angka dalam dokumen ini:
 ## III. Unit Economics Per Transaksi
 
 ### III.A Kopi: Model Buyer-First
+
+<br/><p align="center"><img src="../assets/unit-economics-kopi.svg" alt="Aliran uang per transaksi kopi" width="90%"/></p><br/>
 
 **Asumsi:**
 - 1 Kopdes pilot: 100 petani kopi × 800 kg/tahun = 80 ton/tahun
@@ -334,6 +338,8 @@ Total revenue per Kopdes       = Rp 87.320.000/tahun
 - Mulai tahun ke-3 (setelah subsidi gaji BUMN habis), Kopdes harus membayar gaji manajer sendiri (~Rp60 jt/th dari SHU/reserve)
 - **Break-even penuh (termasuk gaji manajer): bulan ke-18**
 
+<br/><p align="center"><img src="../assets/break-even.svg" alt="Kurva break-even" width="90%"/></p><br/>
+
 ---
 
 ## V. Social Return on Investment (SROI)
@@ -341,6 +347,8 @@ Total revenue per Kopdes       = Rp 87.320.000/tahun
 ### V.A Empat Lapis Dampak
 
 Mengikuti kerangka PEBS FEB UI: Kelayakan Keuangan + Kelayakan Ekonomi + Dampak Ekonomi + Dampak Sosial.
+
+<br/><p align="center"><img src="../assets/sroi-layers.svg" alt="SROI 4-layer multiplier effect" width="90%"/></p><br/>
 
 **1. Dampak Langsung (Direct Impact)**
 
@@ -411,6 +419,8 @@ Total social return tahun pertama  = Rp1.890.000.000
 
 ## VI. Proyeksi Skala
 
+<br/><p align="center"><img src="../assets/proyeksi-skala.svg" alt="Proyeksi skala" width="90%"/></p><br/>
+
 | Tahun | Jumlah Kopdes | Total volume | Dampak kenaikan farmgate | SHU total | TemuNiaga revenue |
 |---|---|---|---|---|---|
 | 1 (pilot) | 10 | 6.600 ton | Rp8,04 M | Rp4,11 M | Rp873 jt |
@@ -429,6 +439,8 @@ Total social return tahun pertama  = Rp1.890.000.000
 ---
 
 ## VII. Sensitivitas & Skenario
+
+<br/><p align="center"><img src="../assets/sensitivitas-tornado.svg" alt="Sensitivitas tornado chart" width="90%"/></p><br/>
 
 ### VII.A Tiga Skenario
 
@@ -499,6 +511,8 @@ Total social return tahun pertama  = Rp1.890.000.000
 ---
 
 ## X. Risiko Finansial & Dampak Rupiah
+
+<br/><p align="center"><img src="../assets/risk-matrix.svg" alt="Risk matrix R1-R12" width="90%"/></p><br/>
 
 | # | Risiko | Probabilitas | Dampak per Kopdes | Mitigasi | Residual risk |
 |---|---|---|---|---|---|
